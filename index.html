@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I SEE YOU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E8E0D0;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+
+        .section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+
+        /* TITLE SECTION */
+        .title-section {
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .title-text {
+            text-align: center;
+        }
+
+        .title-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 10vw, 96px);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .title-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* ENVELOPE SECTION */
+        .envelope-section {
+            justify-content: center;
+        }
+
+        .envelope-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .envelope-image {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* CONTENT SECTION */
+        .content-section {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .chapter-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 8vw, 72px);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+
+        .chapter-divider {
+            width: 60px;
+            height: 1px;
+            background-color: #1a1a1a;
+            margin: 20px auto;
+        }
+
+        .chapter-content {
+            max-width: 600px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .chapter-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* CARD SECTION */
+        .card-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #F5EEE5;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .card-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .card-italic {
+            font-style: italic;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section {
+                padding: 40px 20px;
+            }
+
+            .title-text h1 {
+                font-size: 42px;
+            }
+
+            .chapter-title {
+                font-size: 48px;
+            }
+
+            .card-container {
+                padding: 40px 30px;
+            }
+
+            .card-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title-text h1 {
+                font-size: 36px;
+            }
+
+            .chapter-title {
+                font-size: 36px;
+            }
+
+            .card-container {
+                padding: 30px 20px;
+            }
+
+            .card-title {
+                font-size: 24px;
+            }
+
+            .chapter-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TITLE SECTION -->
+    <section class="section title-section">
+            <div class="title-text">
+                <h1>I SEE YOU</h1>
+                <p>October 10, 2026</p>
+            </div>
+        </section>
+
+        <!-- ENVELOPE CLOSED -->
+        <section class="section envelope-section">
+            <div class="envelope-container">
+                <img src="sobre-closed.png" alt="Envelope closed" class="envelope-image">
+            </div>
+        </section>
+
+        <!-- ENVELOPE FRONT WITH CHAPTER -->
+        <section class="section content-section">
+            <div class="envelope-container">
+                <img src="sobre-front.png" alt="Envelope front - Chapter 01 HERE" class="envelope-image">
+            </div>
+        </section>
+
+    <!-- CARD -->
+    <section class="section">
+        <div class="card-container">
+            <h2 class="card-title">I SEE YOU HERE.</h2>
+            <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+            <p class="card-text">La bienvenida.</p>
+            <p class="card-text">
+                Ahora que llegaste,<br>
+                <span class="card-italic">empieza algo hecho para vos.</span>
+            </p>
+        </div>
+    </section>
+</body>
+</html>
