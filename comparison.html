@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I SEE YOU - Comparison Sobre 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E8E0D0;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+
+        /* COMPARISON SECTION */
+        .comparison-section {
+            gap: 40px;
+            flex-direction: column;
+        }
+
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .comparison-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .comparison-header p {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1400px;
+            height: 70vh;
+        }
+
+        .comparison-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .comparison-item-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .comparison-image {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* PAGES SECTION */
+        .pages-section {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .page-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .page-image {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .comparison-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                height: auto;
+            }
+
+            .comparison-item {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .comparison-header h1 {
+                font-size: 32px;
+            }
+
+            .comparison-item {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- COMPARISON PAGE 1 - SOBRE CERRADO -->
+    <section class="section comparison-section">
+        <div class="comparison-header">
+            <h1>CHAPTER 02: TIRED</h1>
+            <p>Sobre Cerrado (Closed Envelope)</p>
+        </div>
+        <div class="comparison-container">
+            <div class="comparison-item">
+                <div class="comparison-item-label">Tu Versión (PDF Adjunto)</div>
+                <img src="sobre2-page-000.png" alt="Your version - closed" class="comparison-image">
+            </div>
+            <div class="comparison-item">
+                <div class="comparison-item-label">Mi Diseño (HTML/CSS)</div>
+                <svg viewBox="0 0 480 320" style="width: 100%; height: auto; max-height: 100%;">
+                    <defs>
+                        <filter id="paperTexture2">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" result="noise" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+                        </filter>
+                    </defs>
+
+                    <!-- Main envelope body -->
+                    <path
+                        d="M 40 80 L 440 80 L 440 280 L 40 280 Z"
+                        fill="#F5EEE5"
+                        stroke="#D4C7B8"
+                        strokeWidth="0.5"
+                    />
+
+                    <!-- Top flap - triangular -->
+                    <path
+                        d="M 40 80 L 240 20 L 440 80 Z"
+                        fill="#F9F3EB"
+                        stroke="#D4C7B8"
+                        strokeWidth="0.5"
+                        style={{ opacity: 0.95 }}
+                    />
+
+                    <!-- Flap shadow/depth -->
+                    <path
+                        d="M 240 20 L 240 80"
+                        stroke="#C4B7A8"
+                        strokeWidth="1"
+                        opacity="0.3"
+                    />
+
+                    <!-- Vertical divider in middle -->
+                    <line x1="240" y1="80" x2="240" y2="280" stroke="#D4C7B8" strokeWidth="0.8" opacity="0.4" />
+
+                    <!-- Left diagonal -->
+                    <line x1="40" y1="80" x2="240" y2="280" stroke="#D4C7B8" strokeWidth="0.8" opacity="0.3" />
+
+                    <!-- Right diagonal -->
+                    <line x1="440" y1="80" x2="240" y2="280" stroke="#D4C7B8" strokeWidth="0.8" opacity="0.3" />
+
+                    <!-- Seal Circle - 3D effect -->
+                    <!-- Shadow under seal -->
+                    <ellipse cx="240" cy="145" rx="42" ry="40" fill="#000" opacity="0.08" />
+
+                    <!-- Main seal -->
+                    <circle cx="240" cy="140" r="40" fill="#D9CFBF" stroke="#B8A89A" strokeWidth="1.5" />
+
+                    <!-- Seal highlight - 3D effect -->
+                    <ellipse cx="240" cy="125" rx="38" ry="12" fill="#FFFFFF" opacity="0.4" />
+
+                    <!-- Text inside seal -->
+                    <text
+                        x="240"
+                        y="148"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        style={{
+                            fontFamily: 'Playfair Display, Didot, Georgia, serif',
+                            fontSize: '13px',
+                            fontWeight: '400',
+                            letterSpacing: '0.08em',
+                            fill: '#3A3A3A',
+                        }}
+                    >
+                        I SEE
+                    </text>
+                    <text
+                        x="240"
+                        y="164"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        style={{
+                            fontFamily: 'Playfair Display, Didot, Georgia, serif',
+                            fontSize: '13px',
+                            fontWeight: '400',
+                            letterSpacing: '0.08em',
+                            fill: '#3A3A3A',
+                        }}
+                    >
+                        YOU
+                    </text>
+
+                    <!-- Bottom text -->
+                    <line x1="340" y1="220" x2="380" y2="220" stroke="#3A3A3A" strokeWidth="0.8" opacity="0.5" />
+
+                    <text
+                        x="385"
+                        y="235"
+                        style={{
+                            fontFamily: 'Inter, sans-serif',
+                            fontSize: '11px',
+                            fontWeight: '300',
+                            letterSpacing: '0.1em',
+                            fill: '#3A3A3A',
+                            textAnchor: 'start',
+                        }}
+                    >
+                        TIRED
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON PAGE 2 - SOBRE ABIERTO -->
+    <section class="section comparison-section">
+        <div class="comparison-header">
+            <h1>CHAPTER 02: TIRED</h1>
+            <p>Sobre Abierto (Open Envelope)</p>
+        </div>
+        <div class="comparison-container">
+            <div class="comparison-item">
+                <div class="comparison-item-label">Tu Versión (PDF Adjunto)</div>
+                <img src="sobre2-page-001.png" alt="Your version - open" class="comparison-image">
+            </div>
+            <div class="comparison-item">
+                <div class="comparison-item-label">Mi Diseño (HTML/CSS)</div>
+                <svg viewBox="0 0 600 400" style="width: 100%; height: auto; max-height: 100%;">
+                    <!-- Background -->
+                    <rect width="600" height="400" fill="#F5EEE5" />
+
+                    <!-- Title -->
+                    <text
+                        x="300"
+                        y="80"
+                        textAnchor="middle"
+                        style={{
+                            fontFamily: 'Playfair Display, Didot, Georgia, serif',
+                            fontSize: '28px',
+                            fontWeight: '400',
+                            letterSpacing: '0.15em',
+                            fill: '#1a1a1a',
+                        }}
+                    >
+                        I SEE YOU
+                    </text>
+
+                    <!-- Divider line -->
+                    <line x1="240" y1="100" x2="360" y2="100" stroke="#1a1a1a" strokeWidth="1" opacity="0.5" />
+
+                    <!-- Chapter label -->
+                    <text
+                        x="300"
+                        y="140"
+                        textAnchor="middle"
+                        style={{
+                            fontFamily: 'Inter, sans-serif',
+                            fontSize: '12px',
+                            fontWeight: '300',
+                            letterSpacing: '0.15em',
+                            fill: '#1a1a1a',
+                            opacity: '0.7',
+                        }}
+                    >
+                        CHAPTER 02
+                    </text>
+
+                    <!-- Main heading -->
+                    <text
+                        x="300"
+                        y="200"
+                        textAnchor="middle"
+                        style={{
+                            fontFamily: 'Playfair Display, Didot, Georgia, serif',
+                            fontSize: '72px',
+                            fontWeight: '700',
+                            letterSpacing: '-0.01em',
+                            fill: '#1a1a1a',
+                        }}
+                    >
+                        TIRED.
+                    </text>
+
+                    <!-- Content divider -->
+                    <line x1="150" y1="250" x2="450" y2="250" stroke="#1a1a1a" strokeWidth="1" opacity="0.3" />
+
+                    <!-- Right side tags -->
+                    <line x1="480" y1="280" x2="520" y2="280" stroke="#1a1a1a" strokeWidth="0.8" opacity="0.5" />
+
+                    <text
+                        x="525"
+                        y="295"
+                        style={{
+                            fontFamily: 'Inter, sans-serif',
+                            fontSize: '11px',
+                            fontWeight: '300',
+                            letterSpacing: '0.1em',
+                            fill: '#1a1a1a',
+                            textAnchor: 'start',
+                        }}
+                    >
+                        TIRED
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON PAGE 3 - TARJETA -->
+    <section class="section comparison-section">
+        <div class="comparison-header">
+            <h1>CHAPTER 02: TIRED</h1>
+            <p>Tarjeta (Card)</p>
+        </div>
+        <div class="comparison-container">
+            <div class="comparison-item">
+                <div class="comparison-item-label">Tu Versión (PDF Adjunto)</div>
+                <img src="sobre2-page-002.png" alt="Your version - card" class="comparison-image">
+            </div>
+            <div class="comparison-item">
+                <div class="comparison-item-label">Mi Diseño (HTML/CSS)</div>
+                <div style="background: #F5EEE5; padding: 60px 40px; max-width: 500px; text-align: center; box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2); border-radius: 2px;">
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; letter-spacing: '-0.01em'; margin-bottom: 24px; line-height: 1.3;">
+                        I SEE YOU TIRED.
+                    </h2>
+                    <div style="width: 60px; height: 1px; background: #1a1a1a; margin: 20px auto 30px;"></div>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.8; margin-bottom: 20px;">
+                        El spa.
+                    </p>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 300; line-height: 1.8;">
+                        Veo cuánto das.<br>
+                        Veo todo lo que sostenés.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORIGINAL PDF PAGES FOR REFERENCE -->
+    <section class="page-container">
+        <img src="sobre2-page-000.png" alt="PDF Page 1" class="page-image">
+    </section>
+
+    <section class="page-container">
+        <img src="sobre2-page-001.png" alt="PDF Page 2" class="page-image">
+    </section>
+
+    <section class="page-container">
+        <img src="sobre2-page-002.png" alt="PDF Page 3" class="page-image">
+    </section>
+</body>
+</html>
