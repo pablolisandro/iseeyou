@@ -21,6 +21,56 @@
             overflow-x: hidden;
         }
 
+        /* TAB NAVIGATION */
+        .tab-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(232, 224, 208, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .tab-button {
+            padding: 20px 40px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1a1a1a;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+            opacity: 0.6;
+        }
+
+        .tab-button.active {
+            opacity: 1;
+            border-bottom-color: #1a1a1a;
+        }
+
+        .tab-button:hover {
+            opacity: 0.8;
+        }
+
+        /* TAB CONTENT */
+        .tab-content {
+            display: none;
+            padding-top: 80px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
 
         .section {
             width: 100%;
@@ -42,6 +92,7 @@
         .title-section {
             flex-direction: column;
             gap: 80px;
+            padding-top: 80px;
         }
 
         .title-text {
@@ -169,6 +220,17 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .tab-nav {
+                flex-wrap: wrap;
+                gap: 0;
+            }
+
+            .tab-button {
+                padding: 16px 24px;
+                font-size: 12px;
+                flex: 1;
+            }
+
             .section {
                 padding: 40px 20px;
             }
@@ -191,6 +253,11 @@
         }
 
         @media (max-width: 480px) {
+            .tab-button {
+                padding: 12px 16px;
+                font-size: 11px;
+            }
+
             .title-text h1 {
                 font-size: 36px;
             }
@@ -214,8 +281,16 @@
     </style>
 </head>
 <body>
-    <!-- TITLE SECTION -->
-    <section class="section title-section">
+    <!-- TAB NAVIGATION -->
+    <nav class="tab-nav">
+        <button class="tab-button active" onclick="switchTab('chapter01')">CHAPTER 01</button>
+        <button class="tab-button" onclick="switchTab('chapter02')">CHAPTER 02</button>
+    </nav>
+
+    <!-- CHAPTER 01 CONTENT -->
+    <div id="chapter01" class="tab-content active">
+        <!-- TITLE SECTION -->
+        <section class="section title-section">
             <div class="title-text">
                 <h1>I SEE YOU</h1>
                 <p>October 10, 2026</p>
@@ -236,17 +311,81 @@
             </div>
         </section>
 
-    <!-- CARD -->
-    <section class="section">
-        <div class="card-container">
-            <h2 class="card-title">I SEE YOU HERE.</h2>
-            <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
-            <p class="card-text">La bienvenida.</p>
-            <p class="card-text">
-                Ahora que llegaste,<br>
-                <span class="card-italic">empieza algo hecho para vos.</span>
-            </p>
-        </div>
-    </section>
+        <!-- CARD -->
+        <section class="section">
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU HERE.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">La bienvenida.</p>
+                <p class="card-text">
+                    Ahora que llegaste,<br>
+                    <span class="card-italic">empieza algo hecho para vos.</span>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- CHAPTER 02 CONTENT -->
+    <div id="chapter02" class="tab-content">
+        <!-- TITLE SECTION -->
+        <section class="section title-section">
+            <div class="title-text">
+                <h1>I SEE YOU</h1>
+                <p>October 10, 2026</p>
+            </div>
+        </section>
+
+        <!-- ENVELOPE CLOSED -->
+        <section class="section envelope-section">
+            <div class="envelope-container">
+                <img src="chapter02-page-000.png" alt="Envelope closed - Chapter 02" class="envelope-image">
+            </div>
+        </section>
+
+        <!-- ENVELOPE FRONT WITH CHAPTER -->
+        <section class="section content-section">
+            <div class="envelope-container">
+                <img src="chapter02-page-001.png" alt="Envelope front - Chapter 02 TIRED" class="envelope-image">
+            </div>
+        </section>
+
+        <!-- CARD -->
+        <section class="section">
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU TIRED.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">El spa.</p>
+                <p class="card-text">
+                    Veo cuánto das.<br>
+                    Veo todo lo que sostenés.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+
+            // Activate button
+            event.target.classList.add('active');
+
+            // Scroll to top of selected tab
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 </html>
