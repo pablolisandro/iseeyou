@@ -65,11 +65,14 @@
         /* TAB CONTENT */
         .tab-content {
             display: none;
-            padding-top: 80px;
         }
 
         .tab-content.active {
             display: block;
+        }
+
+        .tab-content:not(#magazine) {
+            padding-top: 80px;
         }
 
         .section {
@@ -224,10 +227,10 @@
             height: 100vh;
             position: relative;
             overflow: hidden;
-            padding-top: 0 !important;
             background-image: url('jea-cover.jpg');
             background-size: cover;
             background-position: center;
+            margin-top: 80px;
         }
 
         .magazine-cover::before {
@@ -248,7 +251,7 @@
             z-index: 1;
             display: flex;
             flex-direction: column;
-            padding: 60px 100px;
+            padding: 50px 80px;
             justify-content: space-between;
         }
 
@@ -278,18 +281,18 @@
 
         .magazine-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(100px, 16vw, 180px);
+            font-size: clamp(80px, 14vw, 160px);
             font-weight: 700;
             letter-spacing: -0.03em;
             line-height: 0.85;
             color: #1a1a1a;
-            margin: 40px 0 60px 0;
+            margin: 30px 0 40px 0;
         }
 
         .magazine-main-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 150px;
+            gap: 100px;
             align-items: flex-end;
         }
 
@@ -308,7 +311,7 @@
 
         .magazine-subtitle {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(60px, 10vw, 120px);
+            font-size: clamp(70px, 11vw, 130px);
             font-weight: 700;
             letter-spacing: -0.02em;
             line-height: 0.85;
