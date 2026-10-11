@@ -218,7 +218,131 @@
             font-style: italic;
         }
 
+        /* MAGAZINE COVER */
+        .magazine-cover {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 40px 60px;
+        }
+
+        .magazine-cover-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .magazine-cover-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            padding-right: 40px;
+        }
+
+        .magazine-issue {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .magazine-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            text-align: right;
+            position: absolute;
+            top: 100px;
+            right: 60px;
+        }
+
+        .magazine-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(64px, 10vw, 128px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 0.9;
+            word-break: break-word;
+        }
+
+        .magazine-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 6vw, 64px);
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            opacity: 0.8;
+        }
+
+        .magazine-divider {
+            width: 60px;
+            height: 1px;
+            background-color: #1a1a1a;
+            margin: 20px 0;
+        }
+
+        .magazine-tags {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            line-height: 1.8;
+        }
+
+        .magazine-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .magazine-cover-image-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .magazine-vol {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: auto;
+            opacity: 0.7;
+        }
+
         /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .magazine-cover-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .magazine-cover-text {
+                padding-right: 0;
+            }
+
+            .magazine-cover {
+                padding: 100px 40px 60px;
+            }
+        }
+
         @media (max-width: 768px) {
             .tab-nav {
                 flex-wrap: wrap;
@@ -249,6 +373,24 @@
 
             .card-title {
                 font-size: 28px;
+            }
+
+            .magazine-cover {
+                padding: 80px 30px 60px;
+            }
+
+            .magazine-title {
+                font-size: 48px;
+            }
+
+            .magazine-subtitle {
+                font-size: 32px;
+            }
+
+            .magazine-date {
+                font-size: 10px;
+                right: 30px;
+                top: 80px;
             }
         }
 
@@ -285,6 +427,7 @@
     <nav class="tab-nav">
         <button class="tab-button active" onclick="switchTab('chapter01')">CHAPTER 01</button>
         <button class="tab-button" onclick="switchTab('chapter02')">CHAPTER 02</button>
+        <button class="tab-button" onclick="switchTab('magazine')">MAGAZINE</button>
     </nav>
 
     <!-- CHAPTER 01 CONTENT -->
@@ -359,6 +502,32 @@
                     Veo cuánto das.<br>
                     Veo todo lo que sostenés.
                 </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- MAGAZINE CONTENT -->
+    <div id="magazine" class="tab-content">
+        <!-- MAGAZINE COVER -->
+        <section class="magazine-cover">
+            <div class="magazine-cover-container">
+                <div class="magazine-cover-text">
+                    <div class="magazine-date">10 OCTOBER 2026</div>
+                    <div class="magazine-issue">ISSUE 001</div>
+                    <div class="magazine-title">I SEE YOU.</div>
+                    <div class="magazine-divider"></div>
+                    <div class="magazine-tags">
+                        ART<br>
+                        TRAVEL<br>
+                        IDEAS<br>
+                        PEOPLE<br>
+                        PLACES
+                    </div>
+                    <div class="magazine-vol">VOL. 01</div>
+                </div>
+                <div class="magazine-cover-image-container">
+                    <img src="jea-cover.jpg" alt="I SEE YOU Magazine Cover - Jea" class="magazine-image">
+                </div>
             </div>
         </section>
     </div>
