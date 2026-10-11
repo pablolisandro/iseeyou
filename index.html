@@ -224,10 +224,7 @@
             height: 100vh;
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
+            padding-top: 0 !important;
             background-image: url('jea-cover.jpg');
             background-size: cover;
             background-position: center;
@@ -240,7 +237,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 70%);
+            background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.05) 75%, transparent 100%);
             pointer-events: none;
         }
 
@@ -251,178 +248,159 @@
             z-index: 1;
             display: flex;
             flex-direction: column;
+            padding: 60px 100px;
             justify-content: space-between;
-            padding: 60px 60px;
-        }
-
-        .magazine-cover-text {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            justify-content: flex-start;
         }
 
         .magazine-header-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 80px;
         }
 
         .magazine-issue {
             font-family: 'Inter', sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 300;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #F5EEE5;
+            color: #1a1a1a;
         }
 
         .magazine-date {
             font-family: 'Inter', sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 300;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #F5EEE5;
+            color: #1a1a1a;
         }
 
         .magazine-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(80px, 12vw, 140px);
+            font-size: clamp(100px, 16vw, 180px);
             font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 0.95;
-            word-break: break-word;
-            color: #F5EEE5;
-            margin-bottom: 40px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -0.03em;
+            line-height: 0.85;
+            color: #1a1a1a;
+            margin: 40px 0 60px 0;
         }
 
         .magazine-main-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            flex: 1;
+            gap: 150px;
+            align-items: flex-end;
         }
 
         .magazine-left-col {
             display: flex;
             flex-direction: column;
-            gap: 40px;
-        }
-
-        .magazine-subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(48px, 8vw, 80px);
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            color: #F5EEE5;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .magazine-divider {
-            width: 60px;
-            height: 1px;
-            background-color: #F5EEE5;
-            margin: 20px 0;
-            opacity: 0.8;
-        }
-
-        .magazine-tags {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            line-height: 1.8;
-            color: #F5EEE5;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        .magazine-description {
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #F5EEE5;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-            max-width: 400px;
+            gap: 0;
         }
 
         .magazine-right-col {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 0;
             align-items: flex-end;
-            padding-right: 40px;
+        }
+
+        .magazine-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(60px, 10vw, 120px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 0.85;
+            color: #1a1a1a;
+            text-align: right;
+        }
+
+        .magazine-divider {
+            width: 50px;
+            height: 1.5px;
+            background-color: #1a1a1a;
+            margin: 14px 0 16px 0;
+        }
+
+        .magazine-divider-right {
+            align-self: flex-end;
+        }
+
+        .magazine-tags {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            line-height: 1.7;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .magazine-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: #1a1a1a;
+            max-width: 350px;
+            margin-bottom: 30px;
         }
 
         .magazine-attributes {
             font-family: 'Inter', sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 300;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            line-height: 1.8;
-            color: #F5EEE5;
+            line-height: 1.7;
+            color: #1a1a1a;
             text-align: right;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
         }
 
         .magazine-tagline {
             font-family: 'Playfair Display', serif;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
-            line-height: 1.6;
-            color: #F5EEE5;
+            line-height: 1.5;
+            color: #1a1a1a;
             text-align: right;
-            max-width: 300px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
             font-style: italic;
         }
 
         .magazine-vol {
             font-family: 'Inter', sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 300;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #F5EEE5;
-            margin-top: auto;
+            color: #1a1a1a;
+            margin-top: 30px;
+        }
+
+        .magazine-vol-right {
+            text-align: right;
         }
 
         /* RESPONSIVE */
         @media (max-width: 1024px) {
             .magazine-cover-container {
-                padding: 40px 40px;
-            }
-
-            .magazine-main-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .magazine-right-col {
-                align-items: flex-start;
-                padding-right: 0;
-            }
-
-            .magazine-attributes {
-                text-align: left;
-            }
-
-            .magazine-tagline {
-                text-align: left;
+                padding: 50px 60px;
             }
 
             .magazine-title {
-                font-size: clamp(60px, 10vw, 100px);
+                font-size: clamp(80px, 14vw, 140px);
+                margin: 30px 0 40px 0;
+            }
+
+            .magazine-main-content {
+                gap: 80px;
             }
 
             .magazine-subtitle {
-                font-size: clamp(40px, 8vw, 60px);
+                font-size: clamp(50px, 10vw, 90px);
             }
         }
 
@@ -458,29 +436,52 @@
                 font-size: 28px;
             }
 
-            .magazine-cover-container {
-                padding: 30px 30px;
+            .magazine-cover {
+                padding-top: 0 !important;
             }
 
-            .magazine-header-row {
-                margin-bottom: 40px;
+            .magazine-cover-container {
+                padding: 40px 40px;
             }
 
             .magazine-title {
-                font-size: clamp(48px, 10vw, 80px);
-                margin-bottom: 30px;
+                font-size: clamp(60px, 12vw, 100px);
+                margin: 20px 0 30px 0;
+            }
+
+            .magazine-main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                align-items: flex-start;
+            }
+
+            .magazine-right-col {
+                align-items: flex-start;
             }
 
             .magazine-subtitle {
-                font-size: clamp(36px, 8vw, 48px);
-            }
-
-            .magazine-tags {
-                font-size: 10px;
+                font-size: clamp(40px, 10vw, 70px);
+                text-align: left;
             }
 
             .magazine-attributes {
-                font-size: 10px;
+                text-align: left;
+            }
+
+            .magazine-tagline {
+                text-align: left;
+            }
+
+            .magazine-divider-right {
+                align-self: flex-start;
+            }
+
+            .magazine-tags {
+                font-size: 9px;
+            }
+
+            .magazine-attributes {
+                font-size: 9px;
             }
         }
 
@@ -511,40 +512,24 @@
             }
 
             .magazine-cover-container {
-                padding: 20px 20px;
-            }
-
-            .magazine-header-row {
-                margin-bottom: 20px;
-                flex-direction: column;
-                gap: 10px;
+                padding: 30px 25px;
             }
 
             .magazine-title {
-                font-size: clamp(36px, 10vw, 60px);
-                margin-bottom: 20px;
+                font-size: clamp(48px, 12vw, 80px);
+                margin: 15px 0 25px 0;
+            }
+
+            .magazine-subtitle {
+                font-size: clamp(32px, 10vw, 55px);
             }
 
             .magazine-main-content {
                 gap: 30px;
             }
 
-            .magazine-subtitle {
-                font-size: clamp(28px, 8vw, 40px);
-            }
-
             .magazine-description {
                 font-size: 12px;
-            }
-
-            .magazine-tags {
-                font-size: 9px;
-                line-height: 1.6;
-            }
-
-            .magazine-attributes {
-                font-size: 9px;
-                line-height: 1.6;
             }
 
             .magazine-tagline {
@@ -667,7 +652,7 @@
 
                     <div class="magazine-right-col">
                         <div class="magazine-subtitle">JEA.</div>
-                        <div class="magazine-divider" style="align-self: flex-end;"></div>
+                        <div class="magazine-divider magazine-divider-right"></div>
                         <div class="magazine-attributes">
                             CREATIVE<br>
                             FREE<br>
@@ -678,10 +663,6 @@
                         </div>
                         <div class="magazine-tagline">
                             A WOMAN WHO CREATES WORLDS
-                        </div>
-                        <div class="magazine-tagline" style="font-weight: 300; font-style: italic; margin-top: 30px; font-size: 13px;">
-                            THROUGH MY EYES<br><br>
-                            Moments, observations and the places in between.
                         </div>
                     </div>
                 </div>
