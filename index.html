@@ -138,6 +138,81 @@
             max-width: 600px;
             display: block;
             object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .envelope-image:hover {
+            transform: scale(1.02);
+            filter: brightness(0.95);
+        }
+
+        /* MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: modalSlideIn 0.4s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 2001;
+            transition: opacity 0.2s ease;
+        }
+
+        .modal-close:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .modal-close {
+                top: -35px;
+                font-size: 24px;
+            }
+
+            .modal-content {
+                max-height: 90vh;
+            }
         }
 
         /* CONTENT SECTION */
@@ -673,6 +748,38 @@
         </section>
     </div>
 
+    <!-- ENVELOPE MODALS -->
+    <div id="envelopeModal01" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envelopeModal01')">✕</button>
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU HERE.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">La bienvenida.</p>
+                <p class="card-text">
+                    Ahora que llegaste,<br>
+                    <span class="card-italic">empieza algo hecho para vos.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="envelopeModal02" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envelopeModal02')">✕</button>
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU TIRED.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">El spa.</p>
+                <p class="card-text">
+                    Veo cuánto das.<br>
+                    Veo todo lo que sostenés.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         function switchTab(tabName) {
             // Hide all tab contents
@@ -696,6 +803,73 @@
             // Scroll to top of selected tab
             window.scrollTo(0, 0);
         }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+
+            // Animate modal content
+            const content = modal.querySelector('.modal-content');
+            gsap.fromTo(content,
+                { scale: 0.9, opacity: 0, y: 30 },
+                { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
+            );
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const content = modal.querySelector('.modal-content');
+
+            gsap.to(content, {
+                scale: 0.9,
+                opacity: 0,
+                y: 30,
+                duration: 0.3,
+                ease: 'power2.in',
+                onComplete: () => {
+                    modal.classList.remove('active');
+                }
+            });
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    const modalId = modal.id;
+                    closeModal(modalId);
+                }
+            });
+        });
+
+        // Make envelope images clickable
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chapter 01 envelope
+            const chapter01Envelope = document.querySelectorAll('#chapter01 .envelope-image')[1]; // sobre-front.png
+            if (chapter01Envelope) {
+                chapter01Envelope.addEventListener('click', () => {
+                    openModal('envelopeModal01');
+                });
+            }
+
+            // Chapter 02 envelope
+            const chapter02Envelope = document.querySelectorAll('#chapter02 .envelope-image')[1]; // sobre-front.png
+            if (chapter02Envelope) {
+                chapter02Envelope.addEventListener('click', () => {
+                    openModal('envelopeModal02');
+                });
+            }
+        });
+
+        // Keyboard shortcut: ESC to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const activeModals = document.querySelectorAll('.modal.active');
+                activeModals.forEach(modal => {
+                    closeModal(modal.id);
+                });
+            }
+        });
     </script>
 </body>
 </html>
