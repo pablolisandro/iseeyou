@@ -1,6 +1,6 @@
 # NOW, SEE YOURSELF
 
-Preparación técnica de la experiencia cinematográfica. Con el material que hay hoy no se puede producir la película. `/cinema/` es una demo técnica provisional del reproductor: carteles de hueco, sin escenas, sin imágenes nuevas y sin música.
+Preparación técnica de la experiencia cinematográfica. Con el material que hay hoy no se puede producir la película. `/cinema/` es una demo técnica provisional del reproductor: carteles de hueco, sin escenas, sin imágenes nuevas y sin música. El guion técnico, también sin escenas, está en `STORYBOARD.md`. El registro del agente está en `docs/agents/cursor.md`.
 
 No se modifican `main`, los sobres ni la revista.
 
