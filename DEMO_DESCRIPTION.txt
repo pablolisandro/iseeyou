@@ -1,0 +1,167 @@
+═══════════════════════════════════════════════════════════════════════════════
+INTERACTIVE ENVELOPE DEMO - I SEE YOU
+═══════════════════════════════════════════════════════════════════════════════
+
+INTERACTION FLOW:
+────────────────────────────────────────────────────────────────────────────────
+
+1. USER ENTERS CHAPTER 01
+   └─ Sees: Title "I SEE YOU" → Closed envelope → Open envelope (sobre-front.png)
+   └─ Behavior: sobre-front.png has hover effect (slight zoom + dimmed)
+   └─ Cursor changes to pointer on sobre-front.png
+
+2. USER CLICKS SOBRE-FRONT.PNG
+   └─ Animation: Modal slides in from below
+   └─ Backdrop: Semi-transparent dark overlay with blur
+   └─ Card Content:
+        ┌──────────────────────────────┐
+        │  I SEE YOU HERE.             │
+        │  ───────────────             │
+        │  La bienvenida.              │
+        │                              │
+        │  Ahora que llegaste,         │
+        │  empieza algo hecho para vos.│
+        │  [✕ close button top-right]  │
+        └──────────────────────────────┘
+   └─ Duration: 0.4s smooth animation (GSAP ease-out)
+
+3. MODAL IS OPEN
+   └─ User can:
+      A. Click [✕] → Modal closes (0.3s smooth animation)
+      B. Click outside modal (on dark backdrop) → Modal closes
+      C. Press ESC key → Modal closes
+      D. Read card content and click ✕ or escape
+
+4. CLOSING ANIMATION
+   └─ Card scales down slightly (0.9) + fades out
+   └─ Modal disappears, user returns to scroll view
+   └─ Scroll position preserved
+
+5. REPEAT FOR CHAPTER 02
+   └─ Same interaction, but with "I SEE YOU TIRED." content
+
+
+VISUAL STATES:
+────────────────────────────────────────────────────────────────────────────────
+
+DESKTOP (>1024px):
+┌─────────────────────────────────────────────────────────────────┐
+│ [Dark overlay with blur]                                        │
+│                                                                 │
+│                   ┌──────────────────────┐                      │
+│                   │       [✕]            │                      │
+│                   │                      │                      │
+│                   │  I SEE YOU HERE.     │                      │
+│                   │  ───────────────     │                      │
+│                   │  La bienvenida.      │                      │
+│                   │                      │                      │
+│                   │  Ahora que llegaste, │                      │
+│                   │  empieza algo...     │                      │
+│                   │                      │                      │
+│                   └──────────────────────┘                      │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+MOBILE (<768px):
+┌──────────────────────────────┐
+│ [Dark overlay with blur]     │
+│                              │
+│  ┌──────────────────────┐    │
+│  │        [✕]          │    │
+│  │                      │    │
+│  │ I SEE YOU HERE.      │    │
+│  │ ───────────────      │    │
+│  │ La bienvenida.       │    │
+│  │                      │    │
+│  │ Ahora que llegaste,  │    │
+│  │ empieza algo...      │    │
+│  │                      │    │
+│  └──────────────────────┘    │
+│                              │
+└──────────────────────────────┘
+
+
+HOVER STATES:
+────────────────────────────────────────────────────────────────────────────────
+
+sobre-front.png (NORMAL):
+┌────────────┐
+│  [SOBRE]   │
+│  regular   │
+└────────────┘
+
+sobre-front.png (HOVER):
+┌────────────┐
+│  [SOBRE]   │  ↑ scale(1.02)
+│ brightened │  ↓ brightness(0.95)
+└────────────┘  → cursor: pointer
+
+
+ANIMATION KEYFRAMES (GSAP):
+────────────────────────────────────────────────────────────────────────────────
+
+OPEN ANIMATION:
+  Frame 0 (start):   scale: 0.9,  opacity: 0,  y: 30px
+  Frame 0.4s (end):  scale: 1.0,  opacity: 1,  y: 0px
+  Easing: power2.out
+
+CLOSE ANIMATION:
+  Frame 0 (start):   scale: 1.0,  opacity: 1,  y: 0px
+  Frame 0.3s (end):  scale: 0.9,  opacity: 0,  y: 30px
+  Easing: power2.in
+
+
+RESPONSIVENESS:
+────────────────────────────────────────────────────────────────────────────────
+
+BREAKPOINT: 768px
+  Below 768px (Mobile):
+    - Modal width: 90% of viewport (max 600px)
+    - Max-height: 90vh with overflow-y scroll
+    - Close button: -35px top (tighter)
+    - Padding: 30-40px
+    - Touch-friendly sizing
+
+  Above 768px (Desktop/Tablet):
+    - Modal width: 600px
+    - Max-height: 80vh
+    - Close button: -40px top
+    - Padding: 40-60px
+    - Cursor feedback
+
+EXTRA SMALL: 480px
+  - All text sizes adjust via existing media queries
+  - Modal remains functional and readable
+  - Close button always accessible
+
+
+BROWSER SUPPORT:
+────────────────────────────────────────────────────────────────────────────────
+- GSAP 3.12.2 (CDN): Modern animations
+- CSS Backdrop Filter: Modern browsers (Safari, Chrome, Edge, Firefox)
+- Graceful degradation: Modal works without blur on older browsers
+- Touch events: Native click handlers work on mobile
+
+
+EDGE CASES HANDLED:
+────────────────────────────────────────────────────────────────────────────────
+1. Multiple rapid clicks: GSAP animations prevent jank
+2. ESC while modal animating: Handled by onComplete callback
+3. Resizing window: Modal re-centers via flex
+4. Scrolling while modal open: Backdrop prevents interaction
+5. Mobile keyboard: Modal repositions if needed (standard behavior)
+6. Very small screens: Modal scales down, remains readable
+
+
+═══════════════════════════════════════════════════════════════════════════════
+CONCLUSION:
+
+The interactive envelope opening is now functional and responsive across all
+devices. Users can click envelopes to reveal chapter cards in a smooth modal
+with multiple ways to close (button, click-outside, ESC key).
+
+This maintains the minimal aesthetic of the original design while adding
+clear interactive feedback and engagement.
+
+Ready for user testing and feedback.
+═══════════════════════════════════════════════════════════════════════════════
