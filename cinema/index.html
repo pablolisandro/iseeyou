@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOW, SEE YOURSELF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="player.css">
+</head>
+<body>
+    <main class="cinema" id="cinema" data-state="entering">
+        <h1 class="sr-only">NOW, SEE YOURSELF</h1>
+        <div class="stage" id="stage">
+            <div class="picture" id="picture">
+                <p class="provisional" id="provisional">Demo técnica provisional</p>
+                <video id="reel" playsinline preload="metadata" hidden></video>
+                <div class="slate" id="slate"></div>
+                <div class="entry" id="entry">
+                    <p class="entry-title" id="entry-title">
+                        <span>NOW,</span>
+                        <span>SEE YOURSELF</span>
+                    </p>
+                </div>
+                <div class="controls" id="controls" hidden>
+                    <button type="button" class="icon-button" id="play" aria-label="Reproducir">
+                        <svg class="icon icon-play" viewBox="0 0 16 16" aria-hidden="true">
+                            <polygon points="5,3 13,8 5,13" fill="currentColor"></polygon>
+                        </svg>
+                        <svg class="icon icon-pause" viewBox="0 0 16 16" aria-hidden="true" hidden>
+                            <rect x="4" y="3" width="2.4" height="10" fill="currentColor"></rect>
+                            <rect x="9.6" y="3" width="2.4" height="10" fill="currentColor"></rect>
+                        </svg>
+                        <svg class="icon icon-replay" viewBox="0 0 16 16" aria-hidden="true" hidden>
+                            <path d="M12.5 8a4.5 4.5 0 1 1-1.3-3.2" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+                            <path d="M11.2 2.6v2.8h-2.8" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+                        </svg>
+                    </button>
+                    <span class="time" id="time">0:00</span>
+                    <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Posición" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+                    <span class="time" id="length">0:00</span>
+                    <button type="button" class="icon-button" id="full" aria-label="Pantalla completa">
+                        <svg class="icon icon-enter" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M3 6V3h3M10 3h3v3M13 10v3h-3M6 13H3v-3" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+                        </svg>
+                        <svg class="icon icon-exit" viewBox="0 0 16 16" aria-hidden="true" hidden>
+                            <path d="M6 3v3H3M10 3v3h3M13 10h-3v3M6 13v-3H3" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <p class="sr-only" id="status" aria-live="polite"></p>
+        <p class="sr-only">Espacio pausa. Las flechas buscan. F pone pantalla completa. La proyección actual es una demo técnica provisional, sin escenas ni música.</p>
+    </main>
+    <noscript>
+        <p>NOW, SEE YOURSELF necesita JavaScript para la demo técnica provisional.</p>
+    </noscript>
+    <script src="player.js"></script>
+</body>
+</html>
