@@ -62,18 +62,29 @@ Ninguno. Feature completa y documentada.
 
 ---
 
-## Notas de Coordinación
+## Sesión 2: Sincronización con Memoria Central (2026-10-24)
 
-- ✅ Leído PROJECT_MEMORY.md (ChatGPT, cb1bbde)
-- ✅ Sincronizada rama con main sin descartar cambios
-- ✅ Removido archivo duplicado PROJECT_MEMORY.md de mi rama
-- ✅ Mantenido feature/envelope-magazine con index.html + docs
+**Actualización desde main (commits nuevos de ChatGPT):**
+- ✅ Leído AGENTS.md (d2c1d97): instrucciones compartidas, protocolo de handoff
+- ✅ Leído PROJECT_MEMORY.md (cb1bbde): prioridades, restricciones, estado
+- ✅ Leído docs/MAGAZINE.md (1464dae): mapa editorial 12 páginas, fotos, textos recuperados
 
-**Coordinación pendiente:**
-- Contacto con ChatGPT (revista interior) y Cursor (película) si necesario
-- Proponer PR de feature/envelope-magazine a main una vez aprobado por Pablo
+**Estado verificado:**
+- feature/envelope-magazine: 4 commits con sobre interactivo completo
+- main: estable, nueva documentación de ChatGPT integrada
+- Asignación confirmada: Claude = sobre interactivo (mi rama), ChatGPT = revista (feature/editorial-magazine), Cursor = película (feature/cinema)
+- HyperFrames: verificado fuera del repo, decisión pendiente de integración
+- Restricciones: fotos Jea sin IA, tipografía/paleta preservadas, 12 páginas exactas, viaje al hotel ya ocurrió
+
+**Decisión:** Proponer PR de feature/envelope-magazine a main, listo para integración. Mi tarea completa respecto a alcance asignado (sobre interactivo).
 
 ---
 
-**Estado:** ✅ Bloqueado (esperando review)  
-**Próxima sesión:** Cuando Pablo apruebe o solicite cambios
+## Registro Protocolo (Handoff Mínimo)
+
+2026-10-24 | Claude | feature/envelope-magazine | sobre interactivo (CSS/GSAP modal, responsive, eventos) verificado y documentado | — | ninguno | Proponer PR a main; aguardar merge
+
+---
+
+**Estado:** ✅ Listo para PR  
+**Próxima sesión:** Feedback de Pablo o integración con revista (ChatGPT) y película (Cursor)
