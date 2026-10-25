@@ -42,3 +42,14 @@ La memoria del proyecto está en GitHub, no en chats individuales. Responder y r
 
 ## Handoff mínimo
 Fecha | agente | rama/commit | realizado y probado | bloqueo | siguiente paso. Máximo 10 líneas salvo documentación técnica indispensable.
+
+## REGLA CRÍTICA — INTEGRIDAD FOTOGRÁFICA DE JEA (2026-10-24)
+**Prioridad absoluta, por encima de cualquier prompt de estilo.** El usuario ha rechazado repetidamente portadas generadas porque alteran la cara de Jea. NO repetir el error.
+
+- **Nunca usar generación o edición generativa de imágenes sobre una fotografía que contenga a Jea** para producir una portada o página final, ni siquiera con instrucciones de «preservar el rostro». El modelo puede reinterpretar sus rasgos y no garantiza fidelidad.
+- **Cara intocable:** conservar los píxeles originales de cara y anteojos; no retocar, regenerar, embellecer, suavizar piel, modificar expresión ni sustituir por una cara similar. No hacer «face swap» generativo. Si el usuario permite editar el resto, proteger igualmente la cara original.
+- **Método obligatorio:** composición determinista por capas con fotografía original intacta (HTML/CSS/SVG, Pillow, Photoshop o equivalente); títulos, reglas y recuadros se superponen como capas independientes. Se permite escalar/recortar para encuadrar, sin alterar los rasgos. Mantener el original archivado y separado del diseño.
+- **Antes de entregar:** verificar que la cara procede de la fotografía original y que no se usó ninguna transformación generativa sobre ella. Si la fuente original no está disponible o no se puede verificar, **no fabricar la portada**: pedir el archivo original.
+- **No afirmar que una cara está sin retoques si la imagen se generó con IA.** Si no se puede garantizar integridad, explicitarlo y detener la entrega.
+- Las pruebas anteriores con imagen generativa de la portada de playa **no son válidas como arte final**. Rehacerlas mediante maquetación real sobre el JPEG original de playa, sin tocar la cara.
+- Esta norma es obligatoria para ChatGPT, Claude Code, Cursor y cualquier otro agente.
