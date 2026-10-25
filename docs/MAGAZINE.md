@@ -244,3 +244,24 @@ Pablo siente que el texto propuesto repite demasiado las ideas de otras páginas
 >
 > **Pero yo lo veo.**
 Pablo expresó oralmente «no sé si alguna vez estuviste a mirar», refiriéndose claramente a la frase del borrador «te detuviste a mirar»; conservar la redacción gramatical del borrador. Próximo trabajo: página 11 — I SEE YOU. Evitar enumerar cualidades y repetir facetas ya descritas.
+
+## Página 11 — I SEE YOU — aprobada (2026-10-25)
+Pablo respondió «me gusta. avancemos» al siguiente texto, que queda aprobado:
+**I SEE YOU.** — *Some things deserve to be seen.*
+> Hay miradas que se detienen en lo evidente.
+>
+> Y hay otras que llegan un poco más lejos.
+>
+> Que descubren lo que no siempre se muestra. Que reconocen lo que a veces ni siquiera sabemos expresar.
+>
+> Vos tenés esa manera de mirar.
+>
+> De hacer que las personas se sientan reconocidas, comprendidas, importantes. De encontrar algo único en cada una de ellas.
+>
+> Y quizás, entre tantas personas a las que supiste mirar, haya alguien a quien todavía le debés esa misma atención.
+>
+> Vos.
+>
+> **Porque también merecés verte a través de los ojos de alguien que te ve.**
+
+Se discutió alternativa de terminar en «Vos.» para revelar menos, pero Pablo aprobó la propuesta completa sin pedir ese cambio. Siguiente: página 12 — NOW, SEE YOURSELF (contraportada/transición al film).
