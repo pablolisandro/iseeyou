@@ -196,3 +196,25 @@ Pablo indicó «Avanzamos. Luego si quiero cambiarlo lo hago. porque no estoy 10
 > **Y una belleza imposible de reducir a una imagen.**
 
 Importante: Pablo cambió «habitar su propio cuerpo» por **«habitar su propio ser»**. Conservar exactamente. Próxima página 09 IN BETWEEN. Evitar estructura repetitiva; variar con fragmentos y observaciones.
+
+## Revisión de estructura (2026-10-25)
+Pablo observa que **IN BETWEEN repite conceptos** ya tratados y pide evaluar si corresponde incluirla. Decisión de trabajo: **retirar IN BETWEEN del índice provisional**, sin borrar material histórico. Falta trabajar una sección **SENSUAL**, distinta de BEAUTIFUL. Índice provisional: 01 COVER (aprobada), 02 THE ART OF SEEING (aprobada), 03 HERE (aprobada), 04 CREATE (aprobada), 05 POWERFUL (aprobada), 06 FREE (aprobada), 07 UNEXPECTED (aprobada), 08 BEAUTIFUL (provisional), 09 SENSUAL (texto propuesto, pendiente de aprobación), 10 THROUGH MY EYES (pendiente), 11 I SEE YOU (pendiente), 12 NOW, SEE YOURSELF (contraportada, pendiente).
+Propuesta página 09 **SENSUAL.** — *The art of attraction.*:
+> No todo lo que atrae puede explicarse.
+>
+> Hay algo en su forma de mirar.
+> En la intención de un gesto.
+> En la pausa antes de una sonrisa.
+>
+> Jea tiene una sensualidad que no necesita anunciarse.
+>
+> A veces es sutil. Otras, imposible de ignorar.
+>
+> Es una combinación de seguridad, misterio y una feminidad que expresa a su manera, sin pedir permiso.
+>
+> No se trata solamente de belleza.
+>
+> Se trata de esa presencia que permanece, incluso después de que ella se ha ido.
+>
+> **Some things are meant to be felt.**
+**No aprobado todavía.** Diferenciar BEAUTIFUL (belleza) de SENSUAL (magnetismo, atracción, deseo). Mantener diseño sofisticado y fotografías reales intactas.
