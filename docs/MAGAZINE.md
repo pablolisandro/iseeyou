@@ -265,3 +265,12 @@ Pablo respondió «me gusta. avancemos» al siguiente texto, que queda aprobado:
 > **Porque también merecés verte a través de los ojos de alguien que te ve.**
 
 Se discutió alternativa de terminar en «Vos.» para revelar menos, pero Pablo aprobó la propuesta completa sin pedir ese cambio. Siguiente: página 12 — NOW, SEE YOURSELF (contraportada/transición al film).
+
+## Página 12 — contraportada APROBADA (2026-10-25)
+Pablo confirmó: «Dejemos asi esta pagina 12. Me gusta». Diseño y texto conceptual aprobados como dirección:
+**NOW, SEE YOURSELF.** — *The final chapter.*
+> Un retrato construido a partir de todo lo que veo.
+Contraportada minimalista, transición hacia cortometraje. Diseño final a ajustar.
+**08 BEAUTIFUL, 09 SENSUAL y 10 THROUGH MY EYES quedan provisionales para revisar más adelante.**
+## Nueva fase: mockup completo y comparación de agentes (2026-10-25)
+Pablo pide diseñar juntos un **mockup de las 12 páginas** y después solicitar a Claude Code y Cursor que realicen el mismo ejercicio, comparando diseño y obediencia a la regla de **no alterar cara ni cuerpo de Jea**. Reconoce que ChatGPT no ha respetado antes esa regla; solución: usar fotos originales **sin edición generativa**, montaje determinista, conservar bytes originales y verificar integridad. La portada aprobada es la captura de la selfie con sombrero y gafas, EXACTAMENTE tal como está, no reemplazar por diseños previos. Cursor reportado por Pablo como que **ya terminó su tarea del video**; pendiente de inspeccionar el resultado real/PR, sin asumir detalles.
