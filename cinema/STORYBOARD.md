@@ -1,45 +1,39 @@
-# Guion técnico — NOW, SEE YOURSELF
+# NOW, SEE YOURSELF — primer corte
 
-Estado: 2026-10-24. Montaje real bloqueado. Este archivo no es un guion de escenas.
+Estado: primer corte visible, no corte final. 36 segundos. Mudo.
 
-## Qué está confirmado
+El subtexto no se dice en pantalla. Jea ve a los demás. Este tramo invierte la mirada. El único texto es el título.
 
-- El título de la película es NOW, SEE YOURSELF.
-- La película es el cierre. El orden del proyecto es revista, espejo, película. La producción de la película corre en paralelo (`PROJECT_MEMORY.md`).
-- El viaje al hotel y el spa ya ocurrieron. No se presentan como futuros.
-- La contraportada propuesta de la revista usa el mismo título como puente. Esa página no está ratificada (`docs/MAGAZINE.md`). No se convierte en planos.
-- Los textos HERE y TIRED/El spa viven en `index.html`. Son piezas del sitio, no un guion.
+## Material usado
 
-No hay lista de escenas, metraje, fotografías aprobadas para cine ni tema musical.
+| Fuente | Qué es | Tratamiento |
+| --- | --- | --- |
+| `jea-cover.jpg` | Fotografía original del balcón. Copia intacta en `media/photo/nsy-001-balcony.jpg`, mismo SHA-256. | Escala casi 1:1, recorte 16:9 y deriva vertical de 70 px. Sin retoque. |
+| Playfair Display | Misma familia que el sitio. | Título superpuesto, abajo, fuera del rostro. |
+
+No hay otro video ni otra fotografía original en el repositorio. Los sobres, la tarjeta y los base64 no entran. La selfie de portada aprobada el 2026-10-25 no está en el repo: no se reconstruye.
 
 ## Storyboard
 
-Cada fila es un hueco técnico. La columna Acción queda vacía a propósito.
+| Tiempo | Plano | Transición | Tipo | Sonido |
+| --- | --- | --- | --- | --- |
+| 0:00–0:03 | Negro | Fundido de entrada, 2,8 s | — | Silencio |
+| 0:02–0:11 | La fotografía aparece. Título NOW, / SEE YOURSELF abajo. | El título entra y sale por opacidad | Playfair, marfil, dos líneas, sin sombra | Silencio |
+| 0:11–0:28 | Ella y el balcón. La ventana se mueve apenas. | Ninguna. Un solo plano. | Sin texto | Silencio |
+| 0:28–0:36 | El título vuelve y la imagen cierra. | Fundido a negro, 4 s | El mismo título | Silencio |
 
-| # | Función | Acción | Imagen | Sonido | Estado |
-| --- | --- | --- | --- | --- | --- |
-| 01 | Título | — | Sin plano | Sin tema | Abierto |
-| 02… | Cuerpo | — | Sin plano | Sin tema | Bloqueado: no hay escenas |
-| fin | Cierre | — | Sin plano | Sin tema | Abierto |
+Duración total: 0:36. Un plano, no una sucesión de diapositivas.
 
-Cuando exista un plano, la fila se completa con hechos del material (archivo, `in`, `out`), no con una acción inventada. El orden de proyección se escribe en `sequences/now-see-yourself.json`.
+## Propuesta sonora
 
-## Sonido y licencias
+Este corte queda mudo. Para el corte final: una sola línea, piano o voz sin letra, grabada para la pieza, más larga que la imagen. Sin pista de biblioteca y sin tema elegido. Hace falta el archivo y la licencia de sincronización.
 
-No hay tema elegido ni pista provisoria.
+## Qué falta para el corte final
 
-Antes de poner un archivo en `media/music/`:
+- Confirmar que esta fotografía del balcón puede quedarse en la película.
+- Los JPEG originales del cuerpo del film. La playa y la selfie aprobada no están en el repo.
+- El orden de esas fotos, si van. Cada una sería otro plano largo, con fundido, no un carrusel.
+- La música y su licencia.
+- La duración definitiva. 0:36 es el primer corte, no la medida final.
 
-- Confirmar titular del máster y derecho de sincronización para esta pieza.
-- Entregar WAV o FLAC. La duración tiene que cubrir la imagen: `export.py` no estira ni repite.
-- Dejar `music` en `null` hasta esa confirmación.
-
-Silencio es el estado actual. No se sustituye por una biblioteca ni por audio de los sobres.
-
-## Montaje
-
-No hay insumos, así que no hay corte inicial. `python3 cinema/pipeline/export.py` sale con código 2 y no escribe archivo.
-
-No usar como plano: sobres, `sobre2-page-*`, `tarjeta-card.png`, `jea-cover.jpg`, ni los textos base64. No generar imágenes de Jea.
-
-El reproductor de `/cinema/` sigue en demo técnica provisional hasta que `picture` tenga archivos.
+Rehacer el plano: `bash cinema/pipeline/render-look.sh`.

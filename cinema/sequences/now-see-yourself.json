@@ -1,21 +1,29 @@
 {
   "id": "now-see-yourself",
   "title": "NOW, SEE YOURSELF",
-  "status": "provisional",
+  "status": "primer-corte",
   "frame": {
     "aspect": "16:9",
     "master": "1920x1080",
     "rate": 24
   },
-  "picture": [],
+  "picture": [
+    {
+      "id": "nsy-001-look",
+      "src": "media/video/nsy-001-look.mp4",
+      "poster": "media/photo/nsy-001-balcony.jpg",
+      "in": 0,
+      "out": 36
+    }
+  ],
   "music": null,
   "gaps": [
     {
       "id": "picture",
       "role": "picture",
-      "status": "missing",
+      "status": "primer-corte",
       "accepts": ["video/mp4", "video/webm", "video/quicktime"],
-      "note": "Metraje montado, en orden, con in y out. En el repositorio no hay video."
+      "note": "Un solo movimiento sobre jea-cover.jpg. Faltan las demás fotografías originales para el cuerpo del corte."
     },
     {
       "id": "photo",

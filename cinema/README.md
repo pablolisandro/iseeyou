@@ -1,12 +1,12 @@
 # NOW, SEE YOURSELF
 
-Preparación técnica de la experiencia cinematográfica. Con el material que hay hoy no se puede producir la película. `/cinema/` es una demo técnica provisional del reproductor: carteles de hueco, sin escenas, sin imágenes nuevas y sin música. El guion técnico, también sin escenas, está en `STORYBOARD.md`. El registro del agente está en `docs/agents/cursor.md`.
+Preparación técnica de la experiencia cinematográfica. `/cinema/` proyecta un primer corte de 36 segundos, mudo, sobre la fotografía original del balcón. No es el corte final: falta el resto de las fotos y la música. El detalle está en `STORYBOARD.md`. El registro del agente está en `docs/agents/cursor.md`.
 
 No se modifican `main`, los sobres ni la revista.
 
 ## Inventario
 
-No hay video. No hay audio. No hay guion ni lista de escenas. Estas son todas las piezas visuales del repositorio y por qué no entran en la secuencia.
+No hay video de cámara ni audio en el repositorio. Hay una sola fotografía original de Jea, `jea-cover.jpg`. El primer corte se arma desde esa foto. Los sobres y la tarjeta no son planos.
 
 | Archivo | Medida | Qué es | En la película |
 | --- | --- | --- | --- |

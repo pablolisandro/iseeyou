@@ -21,7 +21,7 @@
     const iconExit = fullButton.querySelector(".icon-exit");
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const entryMs = reduceMotion ? 280 : 3200;
+    let entryHold = reduceMotion ? 280 : 3200;
 
     let manifest = null;
     let program = null;
@@ -67,9 +67,21 @@
         manifest = data;
         program = buildProgram(data);
         paintTitle(entryTitle, data.title || "NOW, SEE YOURSELF");
-        if (!program.provisional) badge.hidden = true;
-        else badge.textContent = program.label;
+        if (data.status === "primer-corte") {
+            program.mark = "Primer corte";
+            badge.hidden = false;
+            badge.textContent = program.mark;
+        } else if (!program.provisional) {
+            program.mark = null;
+            badge.hidden = true;
+        } else {
+            program.mark = null;
+            badge.textContent = program.label;
+        }
         if (program.mode === "picture") {
+            entryTitle.hidden = true;
+            entry.classList.add("is-film");
+            entryHold = reduceMotion ? 80 : 240;
             probeAll(program.items)
                 .then(function (ready) {
                     spans = layout(ready);
@@ -94,7 +106,7 @@
         seek.setAttribute("aria-valuemax", duration().toFixed(1));
         render();
         bind();
-        entryTimer = window.setTimeout(openProgram, entryMs);
+        entryTimer = window.setTimeout(openProgram, entryHold);
     }
 
     function buildProgram(data) {
@@ -104,6 +116,7 @@
                 mode: "picture",
                 title: data.title,
                 provisional: false,
+                mark: null,
                 items: pictureItems.map(function (item) {
                     return {
                         id: item.id || item.src,
@@ -292,9 +305,11 @@
         if (time >= duration() - 0.05) time = 0;
         playing = true;
         root.dataset.state = "playing";
-        status.textContent = program.provisional
-            ? "Reproduciendo la demo técnica provisional."
-            : "Reproduciendo.";
+        status.textContent = program.mark
+            ? "Reproduciendo el primer corte."
+            : program.provisional
+                ? "Reproduciendo la demo técnica provisional."
+                : "Reproduciendo.";
         if (program.mode === "picture") syncPicture(true);
         else {
             lastTick = performance.now();
