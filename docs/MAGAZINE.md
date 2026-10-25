@@ -109,3 +109,17 @@ Pablo respondió «Me gusta, Avancemos» al texto de página 03, que queda **apr
 > Porque algunos lugares se recuerdan por lo que son. Otros, por las personas con quienes los vivimos.
 
 Diseño aún no aprobado. Siguiente texto a trabajar: página 04 CREATE.
+
+## Página 04 — CREATE — versión elegida por Pablo (2026-10-25)
+**CREATE.** — *The art of making worlds.*
+> Hay personas que buscan inspiración en el mundo. Y hay otras que imaginan mundos que todavía no existen.
+>
+> Jea pertenece a esas mentes que nunca dejan de explorar. Observa, conecta, cuestiona y transforma. Donde otros ven lo establecido, ella descubre posibilidades.
+>
+> Su creatividad no se limita a lo que hace. Está en su manera de pensar, de interpretar lo cotidiano y de encontrar conexiones donde aparentemente no las hay.
+>
+> Porque crear no es solamente darle forma a una idea. Es tener la sensibilidad de ver algo antes de que exista.
+>
+> *Y ella tiene esa forma extraordinaria de mirar.*
+
+Pablo devolvió este texto íntegro con un ajuste deliberado: «buscan inspiración» (en vez de «encuentran inspiración»). Conservar exactamente esa elección. Próxima página: 05 POWERFUL.
