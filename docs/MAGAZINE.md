@@ -79,3 +79,17 @@ Para página 02 (EDITOR'S NOTE / The art of seeing.) ChatGPT propuso tres borrad
 - B: «Hay una diferencia entre mirar y ver.»; más revista de moda/cultura.
 - C: «Hay personas que tienen el don de hacernos sentir diferentes, simplemente porque saben vernos.»; más íntimo.
 ChatGPT recomienda A, **pendiente de elección y correcciones de Pablo**. No sustituir el texto previamente aprobado sin confirmación.
+
+## EDITOR'S NOTE — Revisión gramatical propuesta por Pablo y ChatGPT (2026-10-25)
+Pablo redactó una nueva versión, que prevalece como base sobre las opciones A/B/C anteriores. ChatGPT propuso una corrección **pendiente de aprobación**:
+> Hay personas que tienen el don de hacernos sentir diferentes, simplemente por vernos tal como somos.
+>
+> Esa capacidad de mirar más allá y reconocer lo auténtico de cada ser hace que cada encuentro sea único.
+>
+> Pero incluso quienes mejor saben mirar merecen descubrirse desde otra perspectiva.
+>
+> Esta edición es una forma de mirar más de cerca: a la artista, a la mujer, a la persona que crea mundos donde antes no había nada.
+>
+> Una mirada. Muchas versiones de Jea.
+
+Cambios sobre texto del usuario: «tal cual»→«tal como», «Esa particularidad de ver más allá y reconocer lo auténtico del ser, hacen»→«Esa capacidad de mirar más allá y reconocer lo auténtico de cada ser hace», y se elimina coma entre sujeto y «merecen». **No dar por aprobado hasta confirmación.**
