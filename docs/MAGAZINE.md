@@ -172,3 +172,27 @@ Pablo respondió «me gusta, seguimos» al siguiente texto, que queda aprobado:
 > **Life is too interesting to be boring.**
 
 Contexto clave: Jea hace chistes con referencias a memes y frases poco conocidas; incluso quienes no captan la referencia se ríen. Detesta aburrirse y la repetición. Pablo pidió variar la estructura entre páginas, evitar el patrón repetitivo de reflexión general + descripción + moraleja. Siguiente: 08 BEAUTIFUL, con tratamiento poético y breve.
+
+## Página 08 — BEAUTIFUL — versión provisional (2026-10-25)
+Pablo indicó «Avanzamos. Luego si quiero cambiarlo lo hago. porque no estoy 100% convencido». Guardar como **versión de trabajo, NO aprobación definitiva**:
+**BEAUTIFUL.** — *Beyond what the eyes can see.*
+> Hay una belleza que no necesita explicaciones.
+>
+> Está en su presencia.
+> En la seguridad de sus movimientos.
+> En esa manera de habitar su propio ser
+> con una naturalidad que cautiva.
+>
+> En su mirada conviven la fuerza y la dulzura.
+> En su sonrisa, algo que transforma el instante.
+>
+> Hay algo magnético en ella.
+> Algo que va más allá de lo que los ojos alcanzan a ver.
+>
+> Una mujer.
+> Una artista.
+> Una reina.
+>
+> **Y una belleza imposible de reducir a una imagen.**
+
+Importante: Pablo cambió «habitar su propio cuerpo» por **«habitar su propio ser»**. Conservar exactamente. Próxima página 09 IN BETWEEN. Evitar estructura repetitiva; variar con fragmentos y observaciones.
