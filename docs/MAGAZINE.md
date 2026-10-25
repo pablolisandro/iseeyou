@@ -151,3 +151,24 @@ Pablo respondió «Ok. avancemos» al texto propuesto de página 06, aprobado:
 > Porque ser libre no es vivir sin límites. Es conservar la capacidad de decidir quién querés ser, una y otra vez.
 
 Siguiente página a trabajar: 07 — FUNNY / UNEXPECTED.
+
+## Página 07 — UNEXPECTED — aprobada (2026-10-25)
+Pablo respondió «me gusta, seguimos» al siguiente texto, que queda aprobado:
+**UNEXPECTED.** — *An unconventional sense of humor.*
+> No siempre entendés el chiste.
+>
+> A veces es una frase sacada de algún rincón improbable de internet. Otras, una referencia que aparece de la nada, justo cuando la situación lo amerita.
+>
+> Algunos entienden la referencia. Otros no tienen la menor idea.
+>
+> Pero todos terminan riéndose.
+>
+> Jea tiene un universo propio de humor, asociaciones inesperadas y ocurrencias que desafían cualquier lógica convencional.
+>
+> Y una relación bastante particular con el aburrimiento: sencillamente, no lo tolera.
+>
+> Porque para ella siempre tiene que haber algo más. Algo nuevo, algo diferente, algo que rompa con lo previsible.
+>
+> **Life is too interesting to be boring.**
+
+Contexto clave: Jea hace chistes con referencias a memes y frases poco conocidas; incluso quienes no captan la referencia se ríen. Detesta aburrirse y la repetición. Pablo pidió variar la estructura entre páginas, evitar el patrón repetitivo de reflexión general + descripción + moraleja. Siguiente: 08 BEAUTIFUL, con tratamiento poético y breve.
