@@ -138,3 +138,16 @@ Pablo respondió «Perfecto. seguimos.» al texto de página 05, que queda aprob
 > Y hay algo profundamente admirable en una mujer que se atreve a ser exactamente quien es.
 
 Próxima página a desarrollar: 06 — FREE.
+
+## Página 06 — FREE — aprobada (2026-10-25)
+Pablo respondió «Ok. avancemos» al texto propuesto de página 06, aprobado:
+**FREE.** — *The beauty of being untamed.*
+> La libertad no siempre se expresa en grandes decisiones. A veces está en la forma de pensar, en la curiosidad de explorar y en la valentía de vivir sin seguir un guion escrito por otros.
+>
+> Jea tiene algo de ese espíritu imposible de encasillar. Una mezcla de espontaneidad, independencia y sensibilidad que hace que cada experiencia tenga su propio ritmo.
+>
+> Hay libertad en su manera de imaginar, de elegir sus caminos y de encontrar nuevas posibilidades incluso en lo inesperado.
+>
+> Porque ser libre no es vivir sin límites. Es conservar la capacidad de decidir quién querés ser, una y otra vez.
+
+Siguiente página a trabajar: 07 — FUNNY / UNEXPECTED.
