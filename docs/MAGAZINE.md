@@ -236,3 +236,11 @@ Pablo aclaró que la sensualidad de Jea es **visible, expresiva y parte integral
 
 ## Estado — Página 09 SENSUAL (2026-10-25)
 Pablo indicó expresamente: «Vamos a dejarla como provisoria y avanzamos con el resto». La última versión SENSUAL (*An effortless kind of sexy.*, comienza «Hay algo irresistible en su manera de ser mujer») queda **PROVISIONAL, no aprobada definitivamente**. Avanzar a página 10 — THROUGH MY EYES. Mantener variedad estructural y aumentar intimidad gradualmente hacia el cierre.
+
+## Página 10 — THROUGH MY EYES — STANDBY / PROVISORIA (2026-10-25)
+Pablo siente que el texto propuesto repite demasiado las ideas de otras páginas. **No está aprobado y hay que desarrollarlo de nuevo más adelante.** Conservar como borrador el texto anterior, sin asumir aprobación.
+**Único elemento que le gusta especialmente y quiere preservar como posible cierre**:
+> No sé si alguna vez te detuviste a mirar todo eso desde afuera.
+>
+> **Pero yo lo veo.**
+Pablo expresó oralmente «no sé si alguna vez estuviste a mirar», refiriéndose claramente a la frase del borrador «te detuviste a mirar»; conservar la redacción gramatical del borrador. Próximo trabajo: página 11 — I SEE YOU. Evitar enumerar cualidades y repetir facetas ya descritas.
