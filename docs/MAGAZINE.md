@@ -60,3 +60,14 @@ Este mapa proviene de una propuesta previa; el PDF FUSION puede tener otro orden
 Pablo exige **cara de Jea 100% original**, sin ningún retoque o modificación. Se reiteró varias veces por resultados fallidos con generación de imágenes. Para portadas y páginas de revista, queda **prohibido usar ImageGen sobre fotografías de Jea**: no garantiza conservar los píxeles faciales aunque el prompt lo pida. Únicamente componer textos y elementos editoriales sobre el archivo fotográfico original con capas deterministas (Pillow, HTML/CSS, SVG o editor gráfico no generativo). Conservar original y exportado separados, verificar el rostro antes de entregar.
 **Referencia vigente de prueba:** portada de playa, foto original de Jea con vestido blanco al atardecer. Los diseños de playa generados anteriormente son solo referencias de tipografía/posición, no fotografías aptas para publicar. Para rehacer, usar el JPEG original de playa y colocar encima el diseño de portada, sin regenerar rostro ni cuerpo.
 **Aprobación:** todavía no se aprobó la portada final de playa con rostro intacto.
+
+## APROBACIÓN DE PORTADA — 2026-10-25 (decisión más reciente, prevalece)
+**Pablo aprobó explícitamente la portada con selfie de Jea:** sombrero claro de ala ancha, anteojos redondos, top negro, collares y fondo de chapa gris diagonal. Título blanco crema grande «I SEE YOU.» en el tercio superior, «JEA.» en el tercio inferior izquierdo, «ISSUE 001» arriba a la izquierda y «10 OCTOBER 2026» arriba a la derecha. Textos laterales: ART / TRAVEL / IDEAS / PEOPLE / PLACES; AN EXPLORATION OF EVERYTHING SHE IS.; CREATIVE / FREE / INTELLIGENT / FUNNY / POWERFUL / SENSUAL; A WOMAN WHO CREATES WORLDS; THROUGH MY EYES / Moments, observations and the places in between.
+
+**Instrucción textual del usuario:** «vamos con esta. Exactamente esta portada, asi como está».
+
+- **ESTADO: APROBADA Y BLOQUEADA**. No reinterpretar, retocar, recomponer, mejorar, regenerar, recortar ni sustituir esta portada sin nueva autorización expresa.
+- Esta decisión **reemplaza las propuestas anteriores de portada del balcón y de la playa**; pueden reutilizarse como fotografías interiores, no como portada.
+- La referencia aprobada se compartió como captura en el chat del 25/10/2026; **aún no se ha incorporado el archivo binario al repositorio**. No asumir que `jea-cover.jpg` sea esta portada. Antes de integrar, obtener el archivo final exacto en calidad suficiente o confirmar explícitamente el uso de la captura. No sustituirla por una reconstrucción.
+- Preservar siempre la cara real de Jea; la aprobación no autoriza retoques futuros.
+- Siguiente fase: diseñar las 11 páginas restantes coherentes con la estética de esta portada.
