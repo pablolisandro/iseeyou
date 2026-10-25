@@ -233,3 +233,6 @@ Pablo aclaró que la sensualidad de Jea es **visible, expresiva y parte integral
 > Hay belleza, hay misterio, hay picardía. Y una forma muy suya de combinarlo todo.
 >
 > **Sexy is an attitude. And she has plenty of it.**
+
+## Estado — Página 09 SENSUAL (2026-10-25)
+Pablo indicó expresamente: «Vamos a dejarla como provisoria y avanzamos con el resto». La última versión SENSUAL (*An effortless kind of sexy.*, comienza «Hay algo irresistible en su manera de ser mujer») queda **PROVISIONAL, no aprobada definitivamente**. Avanzar a página 10 — THROUGH MY EYES. Mantener variedad estructural y aumentar intimidad gradualmente hacia el cierre.
