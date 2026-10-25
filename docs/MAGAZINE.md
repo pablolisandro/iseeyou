@@ -93,3 +93,6 @@ Pablo redactó una nueva versión, que prevalece como base sobre las opciones A/
 > Una mirada. Muchas versiones de Jea.
 
 Cambios sobre texto del usuario: «tal cual»→«tal como», «Esa particularidad de ver más allá y reconocer lo auténtico del ser, hacen»→«Esa capacidad de mirar más allá y reconocer lo auténtico de cada ser hace», y se elimina coma entre sujeto y «merecen». **No dar por aprobado hasta confirmación.**
+
+## Aprobación — Página 02 (2026-10-25)
+Pablo respondió «Ok. Avancemos» tras la corrección gramatical de EDITOR'S NOTE. Se toma como **texto aprobado para página 02** la versión que comienza «Hay personas que tienen el don de hacernos sentir diferentes, simplemente por vernos tal como somos» y termina «Una mirada. Muchas versiones de Jea», transcrita íntegramente en la sección «Revisión gramatical propuesta» anterior. Tono: 70% editorial, 30% íntimo. Próxima página a trabajar: 03 — HERE; texto histórico existente, pendiente de revisión y aprobación específica.
