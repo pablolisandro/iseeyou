@@ -96,3 +96,16 @@ Cambios sobre texto del usuario: «tal cual»→«tal como», «Esa particularid
 
 ## Aprobación — Página 02 (2026-10-25)
 Pablo respondió «Ok. Avancemos» tras la corrección gramatical de EDITOR'S NOTE. Se toma como **texto aprobado para página 02** la versión que comienza «Hay personas que tienen el don de hacernos sentir diferentes, simplemente por vernos tal como somos» y termina «Una mirada. Muchas versiones de Jea», transcrita íntegramente en la sección «Revisión gramatical propuesta» anterior. Tono: 70% editorial, 30% íntimo. Próxima página a trabajar: 03 — HERE; texto histórico existente, pendiente de revisión y aprobación específica.
+
+## Aprobación — Página 03 HERE (2026-10-25)
+Pablo respondió «Me gusta, Avancemos» al texto de página 03, que queda **aprobado**:
+**HERE.** — *The art of being present.*
+> Hay personas que pasan por los lugares. Y hay otras que dejan algo de sí mismas en ellos.
+>
+> Con Jea, los espacios adquieren otra dimensión. No es solamente dónde está, sino la forma en que observa, descubre y transforma lo que la rodea.
+>
+> Tiene esa manera particular de convertir lo cotidiano en una experiencia, de encontrar belleza en los detalles y de hacer que un momento cualquiera se vuelva memorable.
+>
+> Porque algunos lugares se recuerdan por lo que son. Otros, por las personas con quienes los vivimos.
+
+Diseño aún no aprobado. Siguiente texto a trabajar: página 04 CREATE.
