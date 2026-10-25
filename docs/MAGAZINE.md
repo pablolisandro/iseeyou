@@ -71,3 +71,11 @@ Pablo exige **cara de Jea 100% original**, sin ningún retoque o modificación. 
 - La referencia aprobada se compartió como captura en el chat del 25/10/2026; **aún no se ha incorporado el archivo binario al repositorio**. No asumir que `jea-cover.jpg` sea esta portada. Antes de integrar, obtener el archivo final exacto en calidad suficiente o confirmar explícitamente el uso de la captura. No sustituirla por una reconstrucción.
 - Preservar siempre la cara real de Jea; la aprobación no autoriza retoques futuros.
 - Siguiente fase: diseñar las 11 páginas restantes coherentes con la estética de esta portada.
+
+## Dirección narrativa editorial — 2026-10-25
+Pablo eligió tono **70% editorial / 30% íntimo** para los textos. Aportó una clave narrativa esencial: Jea genera gran impacto en las personas porque **ve su interior y su ser**; quienes están con ella se sienten vistos y reconocidos. El regalo invierte esa mirada: que ella pueda verse a sí misma. **No verbalizar literalmente esta explicación en el texto**, usarla como subtexto y revelar progresivamente el significado hacia las páginas finales / película.
+Para página 02 (EDITOR'S NOTE / The art of seeing.) ChatGPT propuso tres borradores **no aprobados aún**:
+- A: comienza «Hay personas que dejan una impresión. Y hay otras que transforman la manera en que nos sentimos en el mundo.»; termina «Una mirada. Muchas versiones de Jea.»
+- B: «Hay una diferencia entre mirar y ver.»; más revista de moda/cultura.
+- C: «Hay personas que tienen el don de hacernos sentir diferentes, simplemente porque saben vernos.»; más íntimo.
+ChatGPT recomienda A, **pendiente de elección y correcciones de Pablo**. No sustituir el texto previamente aprobado sin confirmación.
