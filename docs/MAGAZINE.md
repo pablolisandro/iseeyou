@@ -218,3 +218,18 @@ Propuesta página 09 **SENSUAL.** — *The art of attraction.*:
 >
 > **Some things are meant to be felt.**
 **No aprobado todavía.** Diferenciar BEAUTIFUL (belleza) de SENSUAL (magnetismo, atracción, deseo). Mantener diseño sofisticado y fotografías reales intactas.
+
+## Página 09 — SENSUAL — revisión a partir de observaciones de Pablo (2026-10-25)
+Pablo aclaró que la sensualidad de Jea es **visible, expresiva y parte integral de su personalidad**, no algo oculto ni «que no necesita anunciarse». Combina seguridad, misterio, belleza, feminidad, actitud de artista, mirada, voz, gestos y la forma de acariciarse el pelo. La referencia a Jennifer Aniston es **orientación de tono**, no comparación textual obligatoria: alguien muy graciosa y a la vez sexy. Se propone reemplazar el borrador anterior por el siguiente, **pendiente de aprobación**:
+**SENSUAL.** — *An effortless kind of sexy.*
+> Hay algo irresistible en su manera de ser mujer.
+>
+> En cómo mira, cómo habla, cómo juega con su pelo. En esa sonrisa que puede ser inocente y provocadora al mismo tiempo.
+>
+> Jea tiene una sensualidad que forma parte de todo lo que es. Está en sus gestos, en su seguridad, en su feminidad y en esa personalidad de artista que la vuelve imposible de confundir con nadie.
+>
+> Puede hacerte reír a carcajadas y, un instante después, dejarte sin palabras con una mirada.
+>
+> Hay belleza, hay misterio, hay picardía. Y una forma muy suya de combinarlo todo.
+>
+> **Sexy is an attitude. And she has plenty of it.**
