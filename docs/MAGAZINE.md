@@ -123,3 +123,18 @@ Diseño aún no aprobado. Siguiente texto a trabajar: página 04 CREATE.
 > *Y ella tiene esa forma extraordinaria de mirar.*
 
 Pablo devolvió este texto íntegro con un ajuste deliberado: «buscan inspiración» (en vez de «encuentran inspiración»). Conservar exactamente esa elección. Próxima página: 05 POWERFUL.
+
+## Página 05 — POWERFUL — aprobada (2026-10-25)
+Pablo respondió «Perfecto. seguimos.» al texto de página 05, que queda aprobado:
+**POWERFUL.** — *The strength of being yourself.*
+> Hay una forma de poder que no necesita hacerse notar.
+>
+> Está en la seguridad de quien conoce su propio camino. En la libertad de elegir, en la determinación de avanzar y en el coraje de sostener aquello en lo que cree.
+>
+> Jea tiene esa fuerza que convive con la sensibilidad. Una personalidad que no necesita renunciar a su esencia para dejar una huella.
+>
+> Porque ser poderosa no significa tener todas las respuestas. Significa confiar en la propia voz, incluso cuando el mundo propone otras.
+>
+> Y hay algo profundamente admirable en una mujer que se atreve a ser exactamente quien es.
+
+Próxima página a desarrollar: 06 — FREE.
