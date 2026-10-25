@@ -55,3 +55,8 @@ Este mapa proviene de una propuesta previa; el PDF FUSION puede tener otro orden
 
 ## Registro editorial
 - 2026-10-24: se recuperó el nombre y contenido parcial de PDF FUSION y documento vivo previo. Aún no se validaron todas las páginas ni fotografías. No hay arte final nuevo aprobado.
+
+## Decisión crítica de producción fotográfica (2026-10-24)
+Pablo exige **cara de Jea 100% original**, sin ningún retoque o modificación. Se reiteró varias veces por resultados fallidos con generación de imágenes. Para portadas y páginas de revista, queda **prohibido usar ImageGen sobre fotografías de Jea**: no garantiza conservar los píxeles faciales aunque el prompt lo pida. Únicamente componer textos y elementos editoriales sobre el archivo fotográfico original con capas deterministas (Pillow, HTML/CSS, SVG o editor gráfico no generativo). Conservar original y exportado separados, verificar el rostro antes de entregar.
+**Referencia vigente de prueba:** portada de playa, foto original de Jea con vestido blanco al atardecer. Los diseños de playa generados anteriormente son solo referencias de tipografía/posición, no fotografías aptas para publicar. Para rehacer, usar el JPEG original de playa y colocar encima el diseño de portada, sin regenerar rostro ni cuerpo.
+**Aprobación:** todavía no se aprobó la portada final de playa con rostro intacto.
