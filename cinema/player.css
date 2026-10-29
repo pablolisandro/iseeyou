@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: #000;
+    color: #e8e0d0;
+}
+
+body {
+    font-family: Inter, "Helvetica Neue", sans-serif;
+}
+
+.cinema {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    background: #000;
+}
+
+.stage {
+    width: min(1120px, calc(100vw - 32px), calc((100dvh - 32px) * 16 / 9));
+    aspect-ratio: 16 / 9;
+    position: relative;
+    background: #000;
+}
+
+.stage.is-fill {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    display: grid;
+    place-items: center;
+}
+
+.stage.is-fill .picture,
+.stage:fullscreen .picture,
+.stage:-webkit-full-screen .picture {
+    position: relative;
+    inset: auto;
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+}
+
+.stage:fullscreen,
+.stage:-webkit-full-screen {
+    display: grid;
+    place-items: center;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.picture {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at center, #161411 0%, #000 70%);
+    box-shadow: inset 0 0 0 1px rgba(232, 224, 208, 0.16);
+    user-select: none;
+}
+
+
+.cinema[data-state="playing"]:not(.is-ui) .picture {
+    cursor: none;
+}
+
+.provisional {
+    position: absolute;
+    z-index: 5;
+    top: max(14px, env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    max-width: calc(100% - 32px);
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+#reel {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.slate,
+.entry {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8%;
+    gap: 16px;
+}
+
+.entry {
+    z-index: 4;
+    background: #000;
+    gap: 0;
+    transition: opacity 1s ease;
+}
+
+.entry.is-done {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.entry.is-film {
+    transition-duration: 0.4s;
+}
+
+.entry-title,
+.slate-title {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(36px, 6.6vw, 84px);
+    line-height: 0.95;
+    letter-spacing: 0.045em;
+}
+
+.entry-title span,
+.slate-title span {
+    display: block;
+}
+
+.entry-title span {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: rise 1.5s ease forwards;
+}
+
+.entry-title span + span {
+    animation-delay: 0.5s;
+}
+
+.slate.is-in {
+    animation: fade 0.7s ease;
+}
+
+.slate-kicker {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    opacity: 0.62;
+}
+
+.slate-heading {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4.4vw, 56px);
+    letter-spacing: 0.08em;
+}
+
+.slate-note {
+    margin: 0;
+    max-width: 28em;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    opacity: 0.72;
+}
+
+.rule {
+    width: 42px;
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background: rgba(232, 224, 208, 0.75);
+}
+
+.controls {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 36px 12px max(8px, env(safe-area-inset-bottom));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+.cinema.is-ui .controls,
+.cinema[data-state="paused"] .controls,
+.cinema[data-state="ended"] .controls,
+.controls:focus-within {
+    opacity: 1;
+}
+
+.icon-button {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    opacity: 0.86;
+    cursor: pointer;
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+    opacity: 1;
+}
+
+.icon-button:focus-visible,
+#seek:focus-visible {
+    outline: 1px solid rgba(232, 224, 208, 0.85);
+    outline-offset: 3px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.time {
+    min-width: 3.2em;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.8;
+}
+
+#seek {
+    flex: 1;
+    height: 44px;
+    margin: 0;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#seek::-webkit-slider-runnable-track {
+    height: 1px;
+    background: rgba(232, 224, 208, 0.5);
+}
+
+#seek::-webkit-slider-thumb {
+    appearance: none;
+    width: 9px;
+    height: 9px;
+    margin-top: -4px;
+    border: 0;
+    border-radius: 50%;
+    background: #e8e0d0;
+}
+
+#seek::-moz-range-track {
+    height: 1px;
+    background: rgba(232, 224, 208, 0.5);
+}
+
+#seek::-moz-range-thumb {
+    width: 9px;
+    height: 9px;
+    border: 0;
+    border-radius: 50%;
+    background: #e8e0d0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@keyframes rise {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .entry,
+    .controls,
+    .slate.is-in,
+    .entry-title span {
+        animation: none;
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .entry.is-done {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .slate-note {
+        font-size: 13px;
+    }
+}

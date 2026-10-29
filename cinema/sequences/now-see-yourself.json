@@ -1,0 +1,84 @@
+{
+  "id": "now-see-yourself",
+  "title": "NOW, SEE YOURSELF",
+  "status": "primer-corte",
+  "frame": {
+    "aspect": "16:9",
+    "master": "1920x1080",
+    "rate": 24
+  },
+  "picture": [
+    {
+      "id": "nsy-001-look",
+      "src": "media/video/nsy-001-look.mp4",
+      "poster": "media/photo/nsy-001-balcony.jpg",
+      "in": 0,
+      "out": 36
+    }
+  ],
+  "music": null,
+  "gaps": [
+    {
+      "id": "picture",
+      "role": "picture",
+      "status": "primer-corte",
+      "accepts": ["video/mp4", "video/webm", "video/quicktime"],
+      "note": "Un solo movimiento sobre jea-cover.jpg. Faltan las demás fotografías originales para el cuerpo del corte."
+    },
+    {
+      "id": "photo",
+      "role": "photo",
+      "status": "missing",
+      "accepts": ["image/jpeg", "image/png"],
+      "note": "Fotografías aprobadas para la película. Las imágenes actuales son sobres, una tarjeta o la portada de la revista, y no entran solas."
+    },
+    {
+      "id": "music",
+      "role": "music",
+      "status": "unassigned",
+      "accepts": ["audio/mpeg", "audio/wav", "audio/flac"],
+      "note": "Ningún tema está elegido ni hay pista provisoria."
+    },
+    {
+      "id": "scenes",
+      "role": "sequence",
+      "status": "missing",
+      "note": "No hay guion ni lista de escenas. Este archivo no inventa planos para llenar el hueco."
+    }
+  ],
+  "demo": {
+    "provisional": true,
+    "label": "Demo técnica provisional",
+    "items": [
+      {
+        "id": "title",
+        "kind": "title",
+        "duration": 5
+      },
+      {
+        "id": "picture-gap",
+        "kind": "gap",
+        "role": "picture",
+        "duration": 6,
+        "kicker": "Picture",
+        "heading": "Sin plano",
+        "note": "No hay metraje en la secuencia."
+      },
+      {
+        "id": "music-gap",
+        "kind": "gap",
+        "role": "music",
+        "duration": 5,
+        "kicker": "Music",
+        "heading": "Sin tema",
+        "note": "La música no está seleccionada."
+      },
+      {
+        "id": "hold",
+        "kind": "hold",
+        "duration": 4,
+        "note": "Fin de la demo técnica."
+      }
+    ]
+  }
+}
