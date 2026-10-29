@@ -400,6 +400,7 @@
     <nav class="tab-nav">
         <button class="tab-button active" onclick="switchTab('chapter01')">CHAPTER 01</button>
         <button class="tab-button" onclick="switchTab('chapter02')">CHAPTER 02</button>
+        <button class="tab-button" onclick="switchTab('chapter03')">CHAPTER 03</button>
     </nav>
 
     <!-- CHAPTER 01 CONTENT -->
@@ -478,6 +479,46 @@
         </section>
     </div>
 
+    <!-- CHAPTER 03 CONTENT -->
+    <div id="chapter03" class="tab-content">
+        <!-- TITLE SECTION -->
+        <section class="section title-section">
+            <div class="title-text">
+                <h1>I SEE YOU</h1>
+                <p>October 10, 2026</p>
+            </div>
+        </section>
+
+        <!-- ENVELOPE CLOSED -->
+        <section class="section envelope-section">
+            <div class="envelope-container">
+                <img src="chapter03-page-000.png" alt="Envelope closed - Chapter 03" class="envelope-image">
+            </div>
+        </section>
+
+        <!-- ENVELOPE FRONT WITH SEAL -->
+        <section class="section content-section">
+            <div class="envelope-container">
+                <img src="chapter02-page-001.png" alt="Envelope front - Chapter 03 SHINING" class="envelope-image">
+            </div>
+        </section>
+
+        <!-- CARD -->
+        <section class="section">
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU SHINING.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">Es momento de cerrar este capítulo.</p>
+                <p class="card-text">
+                    Porque llegó el momento<br>
+                    de materializar esa luz,<br>
+                    <span class="card-italic">que acaricia sutilezas.</span>
+                </p>
+                <p class="card-text">Ya puedes abrir el último sobre.</p>
+            </div>
+        </section>
+    </div>
+
     <!-- ENVELOPE MODALS -->
     <div id="envelopeModal01" class="modal">
         <div class="modal-content">
@@ -505,6 +546,23 @@
                     Veo cuánto das.<br>
                     Veo todo lo que sostenés.
                 </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="envelopeModal03" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envelopeModal03')">✕</button>
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU SHINING.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">Es momento de cerrar este capítulo.</p>
+                <p class="card-text">
+                    Porque llegó el momento<br>
+                    de materializar esa luz,<br>
+                    <span class="card-italic">que acaricia sutilezas.</span>
+                </p>
+                <p class="card-text">Ya puedes abrir el último sobre.</p>
             </div>
         </div>
     </div>
@@ -587,6 +645,14 @@
             if (chapter02Envelope) {
                 chapter02Envelope.addEventListener('click', () => {
                     openModal('envelopeModal02');
+                });
+            }
+
+            // Chapter 03 envelope
+            const chapter03Envelope = document.querySelectorAll('#chapter03 .envelope-image')[1]; // sealed envelope
+            if (chapter03Envelope) {
+                chapter03Envelope.addEventListener('click', () => {
+                    openModal('envelopeModal03');
                 });
             }
         });

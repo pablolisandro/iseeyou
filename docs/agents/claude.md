@@ -90,3 +90,5 @@ Ninguno. Feature completa y documentada.
 **Próxima sesión:** Feedback de Pablo o integración con revista (ChatGPT) y película (Cursor)
 
 2026-10-29 | Claude | feature/envelope-magazine | pestaña MAGAZINE eliminada de index.html (nav, HTML y CSS); la revista pasa a formato físico | — | ninguno | Pablo define el siguiente sobre (capítulo 03) que habla de la revista
+
+2026-10-29 | Claude | feature/envelope-magazine | Chapter 03 "SHINING" agregado: pestaña, sobre (chapter03-page-000.png, GFS Didot igualada al original), sello reutilizado (chapter02-page-001.png), tarjeta y modal; probado en desktop y móvil (Playwright) | pendiente visto bueno visual de Pablo | ninguno | Pablo revisa; luego merge de PR #1
