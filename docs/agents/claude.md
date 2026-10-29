@@ -88,3 +88,5 @@ Ninguno. Feature completa y documentada.
 
 **Estado:** ✅ Listo para PR  
 **Próxima sesión:** Feedback de Pablo o integración con revista (ChatGPT) y película (Cursor)
+
+2026-10-29 | Claude | feature/envelope-magazine | pestaña MAGAZINE eliminada de index.html (nav, HTML y CSS); la revista pasa a formato físico | — | ninguno | Pablo define el siguiente sobre (capítulo 03) que habla de la revista
