@@ -71,7 +71,7 @@
             display: block;
         }
 
-        .tab-content:not(#magazine) {
+        .tab-content {
             padding-top: 80px;
         }
 
@@ -138,6 +138,81 @@
             max-width: 600px;
             display: block;
             object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .envelope-image:hover {
+            transform: scale(1.02);
+            filter: brightness(0.95);
+        }
+
+        /* MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: modalSlideIn 0.4s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 2001;
+            transition: opacity 0.2s ease;
+        }
+
+        .modal-close:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .modal-close {
+                top: -35px;
+                font-size: 24px;
+            }
+
+            .modal-content {
+                max-height: 90vh;
+            }
         }
 
         /* CONTENT SECTION */
@@ -221,191 +296,26 @@
             font-style: italic;
         }
 
-        /* MAGAZINE COVER */
-        .magazine-cover {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            background-image: url('jea-cover.jpg');
-            background-size: cover;
-            background-position: center;
-            margin-top: 80px;
-        }
 
-        .magazine-cover::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.05) 75%, transparent 100%);
-            pointer-events: none;
-        }
 
-        .magazine-cover-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 50px 80px;
-            justify-content: space-between;
-        }
 
-        .magazine-header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
 
-        .magazine-issue {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #1a1a1a;
-        }
 
-        .magazine-date {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #1a1a1a;
-        }
 
-        .magazine-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(80px, 14vw, 160px);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 0.85;
-            color: #1a1a1a;
-            margin: 30px 0 40px 0;
-        }
 
-        .magazine-main-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            align-items: flex-end;
-        }
 
-        .magazine-left-col {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
 
-        .magazine-right-col {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            align-items: flex-end;
-        }
 
-        .magazine-subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(70px, 11vw, 130px);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 0.85;
-            color: #1a1a1a;
-            text-align: right;
-        }
 
-        .magazine-divider {
-            width: 50px;
-            height: 1.5px;
-            background-color: #1a1a1a;
-            margin: 14px 0 16px 0;
-        }
 
-        .magazine-divider-right {
-            align-self: flex-end;
-        }
 
-        .magazine-tags {
-            font-family: 'Inter', sans-serif;
-            font-size: 10px;
-            font-weight: 300;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            line-height: 1.7;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-        }
 
-        .magazine-description {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 300;
-            line-height: 1.7;
-            color: #1a1a1a;
-            max-width: 350px;
-            margin-bottom: 30px;
-        }
 
-        .magazine-attributes {
-            font-family: 'Inter', sans-serif;
-            font-size: 10px;
-            font-weight: 300;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            line-height: 1.7;
-            color: #1a1a1a;
-            text-align: right;
-            margin-bottom: 20px;
-        }
 
-        .magazine-tagline {
-            font-family: 'Playfair Display', serif;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #1a1a1a;
-            text-align: right;
-            font-style: italic;
-        }
 
-        .magazine-vol {
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #1a1a1a;
-            margin-top: 30px;
-        }
 
-        .magazine-vol-right {
-            text-align: right;
-        }
 
         /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .magazine-cover-container {
-                padding: 50px 60px;
-            }
-
-            .magazine-title {
-                font-size: clamp(80px, 14vw, 140px);
-                margin: 30px 0 40px 0;
-            }
-
-            .magazine-main-content {
-                gap: 80px;
-            }
-
-            .magazine-subtitle {
-                font-size: clamp(50px, 10vw, 90px);
-            }
-        }
 
         @media (max-width: 768px) {
             .tab-nav {
@@ -439,53 +349,16 @@
                 font-size: 28px;
             }
 
-            .magazine-cover {
-                padding-top: 0 !important;
-            }
 
-            .magazine-cover-container {
-                padding: 40px 40px;
-            }
 
-            .magazine-title {
-                font-size: clamp(60px, 12vw, 100px);
-                margin: 20px 0 30px 0;
-            }
 
-            .magazine-main-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                align-items: flex-start;
-            }
 
-            .magazine-right-col {
-                align-items: flex-start;
-            }
 
-            .magazine-subtitle {
-                font-size: clamp(40px, 10vw, 70px);
-                text-align: left;
-            }
 
-            .magazine-attributes {
-                text-align: left;
-            }
 
-            .magazine-tagline {
-                text-align: left;
-            }
 
-            .magazine-divider-right {
-                align-self: flex-start;
-            }
 
-            .magazine-tags {
-                font-size: 9px;
-            }
 
-            .magazine-attributes {
-                font-size: 9px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -514,30 +387,11 @@
                 font-size: 14px;
             }
 
-            .magazine-cover-container {
-                padding: 30px 25px;
-            }
 
-            .magazine-title {
-                font-size: clamp(48px, 12vw, 80px);
-                margin: 15px 0 25px 0;
-            }
 
-            .magazine-subtitle {
-                font-size: clamp(32px, 10vw, 55px);
-            }
 
-            .magazine-main-content {
-                gap: 30px;
-            }
 
-            .magazine-description {
-                font-size: 12px;
-            }
 
-            .magazine-tagline {
-                font-size: 12px;
-            }
         }
     </style>
 </head>
@@ -546,7 +400,7 @@
     <nav class="tab-nav">
         <button class="tab-button active" onclick="switchTab('chapter01')">CHAPTER 01</button>
         <button class="tab-button" onclick="switchTab('chapter02')">CHAPTER 02</button>
-        <button class="tab-button" onclick="switchTab('magazine')">MAGAZINE</button>
+        <button class="tab-button" onclick="switchTab('chapter03')">CHAPTER 03</button>
     </nav>
 
     <!-- CHAPTER 01 CONTENT -->
@@ -625,54 +479,95 @@
         </section>
     </div>
 
-    <!-- MAGAZINE CONTENT -->
-    <div id="magazine" class="tab-content">
-        <!-- MAGAZINE COVER -->
-        <section class="magazine-cover">
-            <div class="magazine-cover-container">
-                <div class="magazine-header-row">
-                    <div class="magazine-issue">ISSUE 001</div>
-                    <div class="magazine-date">10 OCTOBER 2026</div>
-                </div>
+    <!-- CHAPTER 03 CONTENT -->
+    <div id="chapter03" class="tab-content">
+        <!-- TITLE SECTION -->
+        <section class="section title-section">
+            <div class="title-text">
+                <h1>I SEE YOU</h1>
+                <p>October 10, 2026</p>
+            </div>
+        </section>
 
-                <div class="magazine-title">I SEE YOU.</div>
+        <!-- ENVELOPE CLOSED -->
+        <section class="section envelope-section">
+            <div class="envelope-container">
+                <img src="chapter03-page-000.png" alt="Envelope closed - Chapter 03" class="envelope-image">
+            </div>
+        </section>
 
-                <div class="magazine-main-content">
-                    <div class="magazine-left-col">
-                        <div class="magazine-divider"></div>
-                        <div class="magazine-tags">
-                            ART<br>
-                            TRAVEL<br>
-                            IDEAS<br>
-                            PEOPLE<br>
-                            PLACES
-                        </div>
-                        <div class="magazine-description">
-                            AN EXPLORATION OF EVERYTHING SHE IS.
-                        </div>
-                        <div class="magazine-vol">VOL. 01</div>
-                    </div>
+        <!-- ENVELOPE FRONT WITH SEAL -->
+        <section class="section content-section">
+            <div class="envelope-container">
+                <img src="chapter02-page-001.png" alt="Envelope front - Chapter 03 SHINING" class="envelope-image">
+            </div>
+        </section>
 
-                    <div class="magazine-right-col">
-                        <div class="magazine-subtitle">JEA.</div>
-                        <div class="magazine-divider magazine-divider-right"></div>
-                        <div class="magazine-attributes">
-                            CREATIVE<br>
-                            FREE<br>
-                            INTELLIGENT<br>
-                            FUNNY<br>
-                            POWERFUL<br>
-                            SENSUAL
-                        </div>
-                        <div class="magazine-tagline">
-                            A WOMAN WHO CREATES WORLDS
-                        </div>
-                    </div>
-                </div>
+        <!-- CARD -->
+        <section class="section">
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU SHINING.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">Es momento de cerrar este capítulo.</p>
+                <p class="card-text">
+                    Porque llegó el momento<br>
+                    de materializar esa luz,<br>
+                    <span class="card-italic">que acaricia sutilezas.</span>
+                </p>
+                <p class="card-text">Ya puedes abrir el último sobre.</p>
             </div>
         </section>
     </div>
 
+    <!-- ENVELOPE MODALS -->
+    <div id="envelopeModal01" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envelopeModal01')">✕</button>
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU HERE.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">La bienvenida.</p>
+                <p class="card-text">
+                    Ahora que llegaste,<br>
+                    <span class="card-italic">empieza algo hecho para vos.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="envelopeModal02" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envelopeModal02')">✕</button>
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU TIRED.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">El spa.</p>
+                <p class="card-text">
+                    Veo cuánto das.<br>
+                    Veo todo lo que sostenés.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="envelopeModal03" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('envelopeModal03')">✕</button>
+            <div class="card-container">
+                <h2 class="card-title">I SEE YOU SHINING.</h2>
+                <div class="chapter-divider" style="margin: 20px auto 30px;"></div>
+                <p class="card-text">Es momento de cerrar este capítulo.</p>
+                <p class="card-text">
+                    Porque llegó el momento<br>
+                    de materializar esa luz,<br>
+                    <span class="card-italic">que acaricia sutilezas.</span>
+                </p>
+                <p class="card-text">Ya puedes abrir el último sobre.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         function switchTab(tabName) {
             // Hide all tab contents
@@ -696,6 +591,81 @@
             // Scroll to top of selected tab
             window.scrollTo(0, 0);
         }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+
+            // Animate modal content
+            const content = modal.querySelector('.modal-content');
+            gsap.fromTo(content,
+                { scale: 0.9, opacity: 0, y: 30 },
+                { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
+            );
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const content = modal.querySelector('.modal-content');
+
+            gsap.to(content, {
+                scale: 0.9,
+                opacity: 0,
+                y: 30,
+                duration: 0.3,
+                ease: 'power2.in',
+                onComplete: () => {
+                    modal.classList.remove('active');
+                }
+            });
+        }
+
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    const modalId = modal.id;
+                    closeModal(modalId);
+                }
+            });
+        });
+
+        // Make envelope images clickable
+        document.addEventListener('DOMContentLoaded', () => {
+            // Chapter 01 envelope
+            const chapter01Envelope = document.querySelectorAll('#chapter01 .envelope-image')[1]; // sobre-front.png
+            if (chapter01Envelope) {
+                chapter01Envelope.addEventListener('click', () => {
+                    openModal('envelopeModal01');
+                });
+            }
+
+            // Chapter 02 envelope
+            const chapter02Envelope = document.querySelectorAll('#chapter02 .envelope-image')[1]; // sobre-front.png
+            if (chapter02Envelope) {
+                chapter02Envelope.addEventListener('click', () => {
+                    openModal('envelopeModal02');
+                });
+            }
+
+            // Chapter 03 envelope
+            const chapter03Envelope = document.querySelectorAll('#chapter03 .envelope-image')[1]; // sealed envelope
+            if (chapter03Envelope) {
+                chapter03Envelope.addEventListener('click', () => {
+                    openModal('envelopeModal03');
+                });
+            }
+        });
+
+        // Keyboard shortcut: ESC to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const activeModals = document.querySelectorAll('.modal.active');
+                activeModals.forEach(modal => {
+                    closeModal(modal.id);
+                });
+            }
+        });
     </script>
 </body>
 </html>
